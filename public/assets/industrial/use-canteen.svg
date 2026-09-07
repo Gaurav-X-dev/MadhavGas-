@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="uc-t uc-d">
+  <title id="uc-t">35 kg LPG cylinders supplying a hotel and canteen kitchen</title>
+  <desc id="uc-d">A high-volume canteen kitchen with large stock pots on a bulk cooking range, supplied from a bank of three 35 kg commercial LPG cylinders.</desc>
+  <defs>
+    <linearGradient id="uc-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22496b"/><stop offset="1" stop-color="#0d2c46"/>
+    </linearGradient>
+    <linearGradient id="uc-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f9fd"/><stop offset=".34" stop-color="#d7e4ef"/><stop offset="1" stop-color="#7e94a9"/>
+    </linearGradient>
+    <linearGradient id="uc-pot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8ea4b8"/><stop offset=".25" stop-color="#e6eef6"/><stop offset=".6" stop-color="#a9bdcd"/><stop offset="1" stop-color="#66798d"/>
+    </linearGradient>
+    <linearGradient id="uc-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#04407a"/><stop offset=".2" stop-color="#0a63b4"/><stop offset=".4" stop-color="#59b4ef"/><stop offset=".62" stop-color="#1276c4"/><stop offset="1" stop-color="#033761"/>
+    </linearGradient>
+    <radialGradient id="uc-heat" cx=".4" cy=".62" r=".55">
+      <stop offset="0" stop-color="#ffd21c" stop-opacity=".38"/><stop offset="1" stop-color="#ffd21c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#uc-wall)"/>
+  <g fill="#ffffff" opacity=".045">
+    <rect y="140" width="1200" height="4"/><rect y="300" width="1200" height="4"/><rect y="460" width="1200" height="4"/>
+    <rect x="180" width="4" height="580"/><rect x="440" width="4" height="580"/><rect x="700" width="4" height="580"/><rect x="960" width="4" height="580"/>
+  </g>
+
+  <path d="M120 50h600l66 148H56z" fill="url(#uc-steel)"/>
+  <rect x="44" y="198" width="754" height="30" rx="10" fill="#8ea4b8"/>
+  <g fill="#ffd21c" opacity=".85"><rect x="150" y="140" width="120" height="11" rx="5"/><rect x="420" y="140" width="120" height="11" rx="5"/><rect x="620" y="140" width="90" height="11" rx="5"/></g>
+
+  <ellipse cx="430" cy="610" rx="440" ry="230" fill="url(#uc-heat)"/>
+
+  <!-- two kitchen staff working the line -->
+  <g transform="translate(300 306)">
+    <path d="M26 290V148a50 50 0 0 1 100 0v142z" fill="#f2f7fc"/>
+    <path d="M26 192h100v11H26z" fill="#0f4577" opacity=".12"/>
+    <rect x="60" y="80" width="32" height="22" rx="10" fill="#d9ab7c"/>
+    <circle cx="76" cy="46" r="40" fill="#e2b98a"/>
+    <path d="M32 32a44 44 0 0 1 88 0c0 8-88 8-88 0z" fill="#ffffff"/>
+    <path d="M26 28h100v17H26z" fill="#e6eef6"/>
+    <path d="M126 180l70 32-13 28-72-28z" fill="#f2f7fc"/>
+    <circle cx="198" cy="220" r="20" fill="#e2b98a"/>
+  </g>
+  <g transform="translate(576 320)">
+    <path d="M24 276V142a48 48 0 0 1 96 0v134z" fill="#eef5fb"/>
+    <path d="M24 184h96v11H24z" fill="#0f4577" opacity=".12"/>
+    <rect x="56" y="76" width="30" height="21" rx="10" fill="#d9ab7c"/>
+    <circle cx="71" cy="44" r="38" fill="#e2b98a"/>
+    <path d="M29 30a42 42 0 0 1 84 0c0 8-84 8-84 0z" fill="#ffffff"/>
+    <path d="M24 26h94v16H24z" fill="#e6eef6"/>
+  </g>
+
+  <!-- bulk cooking range -->
+  <g transform="translate(120 470)">
+    <rect x="0" y="0" width="700" height="34" rx="8" fill="url(#uc-steel)"/>
+    <rect x="0" y="34" width="700" height="16" fill="#5f7488"/>
+    <rect x="0" y="50" width="700" height="220" fill="#7a90a5"/>
+    <g fill="#8ea4b8" stroke="#5f7488" stroke-width="4">
+      <rect x="34" y="94" width="196" height="146" rx="8"/><rect x="252" y="94" width="196" height="146" rx="8"/><rect x="470" y="94" width="196" height="146" rx="8"/>
+    </g>
+    <g fill="#c6d6e4"><rect x="112" y="160" width="42" height="13" rx="6"/><rect x="330" y="160" width="42" height="13" rx="6"/><rect x="548" y="160" width="42" height="13" rx="6"/></g>
+    <rect x="-14" y="270" width="728" height="20" rx="10" fill="#41586e"/>
+  </g>
+
+  <!-- large stock pots, sized for canteen service -->
+  <g transform="translate(146 348)">
+    <ellipse cx="88" cy="130" rx="94" ry="14" fill="#0a2237" opacity=".45"/>
+    <rect x="-4" y="46" width="184" height="14" rx="7" fill="#8ea4b8"/>
+    <path d="M14 6h148a10 10 0 0 1 10 10v100a12 12 0 0 1-12 12H16a12 12 0 0 1-12-12V16A10 10 0 0 1 14 6z" fill="url(#uc-pot)"/>
+    <rect x="-8" y="-6" width="192" height="18" rx="9" fill="#c3d5e5"/>
+    <rect x="68" y="-24" width="40" height="20" rx="9" fill="#8ea4b8"/>
+    <path d="M60 -40c-7-12 0-22 7-29-4 12 9 12 9 24" stroke="#ffffff" stroke-width="6" fill="none" opacity=".35" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(436 372)">
+    <ellipse cx="76" cy="108" rx="82" ry="12" fill="#0a2237" opacity=".45"/>
+    <rect x="-2" y="38" width="158" height="13" rx="6" fill="#8ea4b8"/>
+    <path d="M12 6h128a10 10 0 0 1 10 10v82a10 10 0 0 1-10 10H12a10 10 0 0 1-10-10V16A10 10 0 0 1 12 6z" fill="url(#uc-pot)"/>
+    <rect x="-6" y="-4" width="164" height="16" rx="8" fill="#c3d5e5"/>
+    <rect x="58" y="-20" width="36" height="18" rx="8" fill="#8ea4b8"/>
+  </g>
+
+  <!-- three 35 kg cylinders on a manifold header -->
+  <g transform="translate(792 470)">
+    <ellipse cx="184" cy="286" rx="238" ry="24" fill="#0a2237" opacity=".45"/>
+    <g stroke="#8ea4b8" stroke-width="11" fill="none" stroke-linecap="round">
+      <path d="M56 20h256"/><path d="M56 20v26M184 20v26M312 20v26"/><path d="M56 20H-42a28 28 0 0 0-28 28v62"/>
+    </g>
+    <rect x="300" y="2" width="32" height="28" rx="8" fill="#ffd21c"/>
+    <g transform="translate(10 46)">
+      <rect width="92" height="230" rx="30" fill="url(#uc-cyl)"/><rect y="164" width="92" height="28" fill="#ffd21c"/>
+      <rect x="29" y="-26" width="34" height="30" rx="9" fill="#8299ad"/><rect x="16" y="-38" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="17" y="62" width="58" height="44" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="46" y="94" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" text-anchor="middle">35</text>
+    </g>
+    <g transform="translate(138 46)">
+      <rect width="92" height="230" rx="30" fill="url(#uc-cyl)"/><rect y="164" width="92" height="28" fill="#ffd21c"/>
+      <rect x="29" y="-26" width="34" height="30" rx="9" fill="#8299ad"/><rect x="16" y="-38" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="17" y="62" width="58" height="44" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="46" y="94" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" text-anchor="middle">35</text>
+    </g>
+    <g transform="translate(266 46)">
+      <rect width="92" height="230" rx="30" fill="url(#uc-cyl)"/><rect y="164" width="92" height="28" fill="#ffd21c"/>
+      <rect x="29" y="-26" width="34" height="30" rx="9" fill="#8299ad"/><rect x="16" y="-38" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="17" y="62" width="58" height="44" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="46" y="94" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" text-anchor="middle">35</text>
+    </g>
+    <rect x="-16" y="276" width="404" height="18" rx="9" fill="#41586e"/>
+  </g>
+
+  <rect y="856" width="1200" height="44" fill="#08203a" opacity=".5"/>
+</svg>

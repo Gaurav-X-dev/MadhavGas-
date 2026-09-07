@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 208 47% 97%;
+    --foreground: 210 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 47% 11%;
+    --primary: 205 100% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 205 100% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 205 100% 33%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 100% 50%;
+    --warning-foreground: 0 0% 100%;
+    --success: 142 71% 37%;
+    --success-foreground: 0 0% 100%;
+    --border: 210 32% 87%;
+    --input: 210 32% 87%;
+    --ring: 205 100% 33%;
+    --radius: 0.625rem;
+
+    --chart-1: 205 100% 33%;
+    --chart-2: 38 100% 50%;
+    --chart-3: 142 71% 37%;
+    --chart-4: 210 80% 50%;
+    --chart-5: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-fade-in-up { animation: none; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

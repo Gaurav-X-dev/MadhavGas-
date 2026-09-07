@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="ck-t ck-d">
+  <title id="ck-t">Commercial hotel kitchen running on non-domestic LPG</title>
+  <desc id="ck-d">A stainless-steel commercial kitchen line with high-pressure burners, extraction hood and a chef, supplied by 19 kg commercial LPG cylinders.</desc>
+  <defs>
+    <linearGradient id="ck-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20415f"/><stop offset="1" stop-color="#0e2b44"/>
+    </linearGradient>
+    <linearGradient id="ck-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f7fc"/><stop offset=".3" stop-color="#d5e2ee"/><stop offset=".55" stop-color="#a9bccd"/><stop offset="1" stop-color="#7c92a7"/>
+    </linearGradient>
+    <linearGradient id="ck-steel2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9d9e7"/><stop offset=".2" stop-color="#eef5fb"/><stop offset=".5" stop-color="#b6c8d8"/><stop offset=".8" stop-color="#e3edf6"/><stop offset="1" stop-color="#9fb4c7"/>
+    </linearGradient>
+    <linearGradient id="ck-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08528f"/><stop offset=".3" stop-color="#3d9de3"/><stop offset=".6" stop-color="#0d69b5"/><stop offset="1" stop-color="#054478"/>
+    </linearGradient>
+    <radialGradient id="ck-heat" cx=".5" cy=".8" r=".7">
+      <stop offset="0" stop-color="#ffd21c" stop-opacity=".55"/><stop offset="1" stop-color="#ffd21c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="860" fill="url(#ck-wall)"/>
+  <g fill="#ffffff" opacity=".045">
+    <rect x="0" y="120" width="1200" height="4"/><rect x="0" y="250" width="1200" height="4"/>
+    <rect x="0" y="380" width="1200" height="4"/>
+    <rect x="180" y="0" width="4" height="500"/><rect x="420" y="0" width="4" height="500"/>
+    <rect x="660" y="0" width="4" height="500"/><rect x="900" y="0" width="4" height="500"/>
+  </g>
+
+  <g>
+    <path d="M240 40h700l72 176H168z" fill="url(#ck-steel)"/>
+    <rect x="150" y="216" width="900" height="34" rx="10" fill="#8ea4b8"/>
+    <rect x="180" y="228" width="840" height="10" rx="5" fill="#0e2b44" opacity=".35"/>
+    <g fill="#ffd21c" opacity=".9"><rect x="300" y="152" width="120" height="12" rx="6"/><rect x="780" y="152" width="120" height="12" rx="6"/></g>
+    <rect x="546" y="120" width="108" height="96" rx="10" fill="#6f869b"/>
+  </g>
+
+  <ellipse cx="600" cy="600" rx="470" ry="200" fill="url(#ck-heat)"/>
+
+  <g transform="translate(452 292)">
+    <ellipse cx="86" cy="238" rx="86" ry="16" fill="#0a2237" opacity=".45"/>
+    <path d="M42 236V132a44 44 0 0 1 88 0v104z" fill="#f2f7fc"/>
+    <path d="M42 168h88v10H42z" fill="#0f4577" opacity=".14"/>
+    <path d="M52 236h28v-58H52zM104 236h28v-58h-28z" fill="#2b3f52"/>
+    <circle cx="86" cy="86" r="38" fill="#f0c9a4"/>
+    <path d="M48 78c0-30 14-48 38-48s38 18 38 48z" fill="#33475b" opacity=".18"/>
+    <path d="M40 62c0-30 20-46 46-46s46 16 46 46c0 8-92 8-92 0z" fill="#ffffff"/>
+    <path d="M36 60h100v14H36z" fill="#e6eef6"/>
+    <rect x="66" y="118" width="40" height="14" rx="7" fill="#e2b98a"/>
+    <path d="M130 152l58 26-10 22-62-30z" fill="#f2f7fc"/>
+    <rect x="176" y="164" width="66" height="14" rx="7" fill="#8ea4b8"/>
+  </g>
+  <g transform="translate(150 470)">
+    <rect x="0" y="0" width="900" height="34" rx="8" fill="url(#ck-steel2)"/>
+    <rect x="0" y="34" width="900" height="180" fill="#7a90a5"/>
+    <rect x="0" y="34" width="900" height="12" fill="#5f7488"/>
+    <g fill="#8ea4b8" stroke="#5f7488" stroke-width="4">
+      <rect x="34" y="70" width="180" height="120" rx="8"/><rect x="252" y="70" width="180" height="120" rx="8"/>
+      <rect x="470" y="70" width="180" height="120" rx="8"/><rect x="688" y="70" width="180" height="120" rx="8"/>
+    </g>
+    <g fill="#c6d6e4"><rect x="104" y="120" width="40" height="12" rx="6"/><rect x="322" y="120" width="40" height="12" rx="6"/><rect x="540" y="120" width="40" height="12" rx="6"/><rect x="758" y="120" width="40" height="12" rx="6"/></g>
+    <g fill="#41586e"><rect x="-10" y="214" width="920" height="20" rx="10"/></g>
+  </g>
+
+  <g>
+    <g transform="translate(260 396)">
+      <ellipse cx="60" cy="74" rx="62" ry="10" fill="#0a2237" opacity=".5"/>
+      <circle cx="60" cy="66" r="46" fill="#41586e"/>
+      <circle cx="60" cy="66" r="30" fill="#2b3f52"/>
+      <path d="M60 64c-16-16-9-34 1-44-3 18 14 20 14 38 0 12-8 18-15 18s-10-6-8-12z" fill="#3aa2ff" opacity=".95"/>
+      <path d="M60 56c-8-8-4-17 1-22-2 9 7 10 7 19 0 6-4 9-8 9s-5-3-4-6z" fill="#ffd21c"/>
+      <path d="M6 44h108a10 10 0 0 1 0 0" fill="none"/>
+      <rect x="-6" y="30" width="132" height="12" rx="6" fill="#8ea4b8"/>
+      <path d="M14 30l16-22h60l16 22z" fill="#5f7488" opacity=".5"/>
+    </g>
+    <g transform="translate(690 396)">
+      <ellipse cx="60" cy="74" rx="62" ry="10" fill="#0a2237" opacity=".5"/>
+      <circle cx="60" cy="66" r="46" fill="#41586e"/>
+      <circle cx="60" cy="66" r="30" fill="#2b3f52"/>
+      <path d="M60 64c-16-16-9-34 1-44-3 18 14 20 14 38 0 12-8 18-15 18s-10-6-8-12z" fill="#3aa2ff" opacity=".95"/>
+      <path d="M60 56c-8-8-4-17 1-22-2 9 7 10 7 19 0 6-4 9-8 9s-5-3-4-6z" fill="#ffd21c"/>
+      <rect x="-6" y="30" width="132" height="12" rx="6" fill="#8ea4b8"/>
+    </g>
+  </g>
+
+
+  <g transform="translate(60 596)">
+    <ellipse cx="112" cy="196" rx="140" ry="20" fill="#0a2237" opacity=".45"/>
+    <g transform="translate(0 40)">
+      <rect x="0" y="0" width="76" height="152" rx="24" fill="url(#ck-cyl)"/>
+      <rect x="0" y="104" width="76" height="22" fill="#ffd21c"/>
+      <rect x="23" y="-20" width="30" height="24" rx="7" fill="#8299ad"/>
+      <rect x="12" y="-30" width="52" height="11" rx="5" fill="#647d94"/>
+      <text x="38" y="70" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" text-anchor="middle" opacity=".9">19</text>
+    </g>
+    <g transform="translate(94 40)">
+      <rect x="0" y="0" width="76" height="152" rx="24" fill="url(#ck-cyl)"/>
+      <rect x="0" y="104" width="76" height="22" fill="#ffd21c"/>
+      <rect x="23" y="-20" width="30" height="24" rx="7" fill="#8299ad"/>
+      <rect x="12" y="-30" width="52" height="11" rx="5" fill="#647d94"/>
+      <text x="38" y="70" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" text-anchor="middle" opacity=".9">19</text>
+    </g>
+    <g stroke="#8ea4b8" stroke-width="8" fill="none" stroke-linecap="round">
+      <path d="M20 8h130"/><path d="M38 8v30M132 8v30"/><path d="M150 8c40 0 40-70 90-70"/>
+    </g>
+    <rect x="-14" y="196" width="252" height="14" rx="7" fill="#41586e"/>
+  </g>
+
+  <rect y="792" width="1200" height="68" fill="#0a2237" opacity=".55"/>
+</svg>

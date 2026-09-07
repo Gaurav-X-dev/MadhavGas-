@@ -1,0 +1,333 @@
+{
+  "quickLinks": {
+    "published": true,
+    "displayOrder": 1,
+    "items": [
+      {
+        "id": "quick-call",
+        "icon": "phone",
+        "title": "Call Agency",
+        "description": "Speak directly with our commercial support team.",
+        "linkText": "Call now",
+        "href": "tel:",
+        "displayOrder": 1,
+        "published": true
+      },
+      {
+        "id": "quick-map",
+        "icon": "map-pin",
+        "title": "Get Directions",
+        "description": "Find the fastest route to our agency office.",
+        "linkText": "Open map",
+        "href": "maps:",
+        "displayOrder": 2,
+        "published": true
+      },
+      {
+        "id": "quick-whatsapp",
+        "icon": "whatsapp",
+        "title": "WhatsApp",
+        "description": "Start a quick business supply conversation.",
+        "linkText": "Chat now",
+        "href": "whatsapp:",
+        "displayOrder": 3,
+        "published": true
+      },
+      {
+        "id": "quick-contact",
+        "icon": "mail",
+        "title": "Contact Us",
+        "description": "Send your non-domestic LPG requirement.",
+        "linkText": "Write to us",
+        "href": "/contact",
+        "displayOrder": 4,
+        "published": true
+      }
+    ]
+  },
+  "qr": {
+    "published": true,
+    "displayOrder": 2,
+    "eyebrow": "Quick LPG Booking",
+    "title": "Scan the QR. Start Your Booking.",
+    "description": "Use your phone camera to open a ready-to-send WhatsApp enquiry. Add your business name, cylinder size, quantity and delivery area — our MBGA team will confirm the next step.",
+    "ctaText": "Book LPG on WhatsApp",
+    "badgeText": "MBGA × Bharatgas",
+    "scanTitle": "Scan to Book",
+    "scanSubtitle": "Opens a direct WhatsApp enquiry",
+    "benefits": [
+      {
+        "id": "qrb-1",
+        "icon": "clock",
+        "label": "Fast enquiry",
+        "displayOrder": 1
+      },
+      {
+        "id": "qrb-2",
+        "icon": "shield-check",
+        "label": "Direct MBGA support",
+        "displayOrder": 2
+      },
+      {
+        "id": "qrb-3",
+        "icon": "phone",
+        "label": "No app form needed",
+        "displayOrder": 3
+      }
+    ]
+  },
+  "about": {
+    "published": true,
+    "displayOrder": 3,
+    "eyebrow": "About Our Agency",
+    "title": "Non-Domestic LPG Supply Built Around Industrial Operations",
+    "lead": "Madhav Bharat Gas Agency (MBGA) supplies commercial and industrial LPG as an authorized distributor of the Bharatgas brand.",
+    "detail": "Our team combines an organized supply process with responsive local account support for manufacturing units, processing plants, hotels, caterers and large commercial kitchens.",
+    "image": "/assets/industrial/industrial-plant.svg",
+    "imageAlt": "Bulk LPG installation with manifold cylinder bank at an industrial site",
+    "badgeTitle": "MBGA",
+    "badgeSubtitle": "Authorized Bharatgas Distributor",
+    "checkItems": [
+      {
+        "id": "chk-1",
+        "label": "Authorized Bharatgas Distributor",
+        "displayOrder": 1
+      },
+      {
+        "id": "chk-2",
+        "label": "Commercial & Industrial LPG",
+        "displayOrder": 2
+      },
+      {
+        "id": "chk-3",
+        "label": "Dedicated Account Support",
+        "displayOrder": 3
+      },
+      {
+        "id": "chk-4",
+        "label": "Safety-Led Handling",
+        "displayOrder": 4
+      }
+    ],
+    "metrics": [
+      {
+        "id": "met-1",
+        "value": "B2B",
+        "label": "Business-Focused Supply",
+        "displayOrder": 1
+      },
+      {
+        "id": "met-2",
+        "value": "6 Days",
+        "label": "Weekly Helpdesk",
+        "displayOrder": 2
+      },
+      {
+        "id": "met-3",
+        "value": "Local",
+        "label": "Responsive Team",
+        "displayOrder": 3
+      }
+    ],
+    "ctaText": "Know More About Our Service",
+    "ctaLink": "/contact"
+  },
+  "services": {
+    "published": true,
+    "displayOrder": 4,
+    "eyebrow": "Our Commitment",
+    "title": "Service Standards You Can Rely On",
+    "lead": "Professional standards at every step, from cylinder handling to industrial account support.",
+    "cards": [
+      {
+        "id": "svc-1",
+        "icon": "shield-check",
+        "title": "Safe Handling",
+        "description": "Responsible cylinder handling backed by established industrial safety procedures.",
+        "linkText": "Explore Safety",
+        "linkHref": "/gallery",
+        "displayOrder": 1,
+        "published": true
+      },
+      {
+        "id": "svc-2",
+        "icon": "headphones",
+        "title": "Reliable Assistance",
+        "description": "Consistent assistance and clear service communication for every business account.",
+        "linkText": "Get Assistance",
+        "linkHref": "/contact",
+        "displayOrder": 2,
+        "published": true
+      },
+      {
+        "id": "svc-3",
+        "icon": "clock",
+        "title": "Timely Service",
+        "description": "Organized dispatch coordination that respects your production and service schedules.",
+        "linkText": "Request Support",
+        "linkHref": "/contact",
+        "displayOrder": 3,
+        "published": true
+      },
+      {
+        "id": "svc-4",
+        "icon": "map-pin",
+        "title": "Local Support",
+        "description": "Prompt local guidance whenever your plant or kitchen needs it.",
+        "linkText": "Find Our Agency",
+        "linkHref": "/contact",
+        "displayOrder": 4,
+        "published": true
+      }
+    ]
+  },
+  "products": {
+    "published": true,
+    "displayOrder": 5,
+    "eyebrow": "Commercial & Industrial LPG Range",
+    "title": "The Right Cylinder for Every Operation",
+    "lead": "Flexible LPG solutions for manufacturing units, processing plants, hotels and high-volume commercial kitchens.",
+    "ctaText": "Explore All Products",
+    "limit": 3,
+    "noteTitle": "Business-specific pricing",
+    "noteDescription": "Monthly rates are shared according to volume, payment terms and delivery requirements.",
+    "noteCtaText": "Get a Custom Quote"
+  },
+  "safety": {
+    "published": true,
+    "displayOrder": 6,
+    "eyebrow": "Safety at Site",
+    "title": "Small Safety Habits.\nA Safer Plant.",
+    "lead": "Simple routine checks keep every LPG-powered commercial and industrial site safe.",
+    "image": "/assets/industrial/industrial-safety.svg",
+    "imageAlt": "Technician in safety gear inspecting a commercial LPG cylinder manifold",
+    "badgeText": "Safety First, Every Day",
+    "proofTitle": "4 essential checks",
+    "proofSubtitle": "Review them before every shift",
+    "ctaText": "Ask a Safety Question",
+    "ctaLink": "/contact",
+    "helpTitle": "Suspect a gas leak?",
+    "helpLinkText": "Call our support team immediately",
+    "panelKicker": "Daily Safety Checklist",
+    "panelTitle": "Four checks for a safer site",
+    "panelSubtitle": "Quick preventive habits every commercial LPG user should follow.",
+    "steps": [
+      {
+        "id": "safe-1",
+        "title": "Keep It Upright",
+        "description": "Place every cylinder vertically on a stable, level and ventilated surface.",
+        "displayOrder": 1
+      },
+      {
+        "id": "safe-2",
+        "title": "Inspect Connections",
+        "description": "Check regulators, manifold headers and hoses at regular intervals.",
+        "displayOrder": 2
+      },
+      {
+        "id": "safe-3",
+        "title": "Allow Ventilation",
+        "description": "Keep the cylinder bank area airy and never block ventilation points.",
+        "displayOrder": 3
+      },
+      {
+        "id": "safe-4",
+        "title": "Respond Correctly",
+        "description": "Shut the valve and call authorized support immediately if leakage is suspected.",
+        "displayOrder": 4
+      }
+    ],
+    "footerTitle": "Need help understanding a safety step?",
+    "footerSubtitle": "Our agency team will guide your site staff clearly.",
+    "footerLinkText": "Talk to Us",
+    "footerLinkHref": "/contact"
+  },
+  "trustStrip": {
+    "published": true,
+    "displayOrder": 7,
+    "items": [
+      {
+        "id": "trust-1",
+        "icon": "shield-check",
+        "label": "Safe LPG Handling",
+        "displayOrder": 1
+      },
+      {
+        "id": "trust-2",
+        "icon": "headphones",
+        "label": "Professional Support",
+        "displayOrder": 2
+      },
+      {
+        "id": "trust-3",
+        "icon": "map-pin",
+        "label": "Local Assistance",
+        "displayOrder": 3
+      },
+      {
+        "id": "trust-4",
+        "icon": "clock",
+        "label": "Reliable Service",
+        "displayOrder": 4
+      }
+    ]
+  },
+  "journey": {
+    "published": true,
+    "displayOrder": 8,
+    "eyebrow": "Our Legacy & Growth",
+    "title": "Two Journeys. One Reliable Service Relationship.",
+    "ctaText": "Explore Both Journeys",
+    "limit": 4
+  },
+  "achievements": {
+    "published": true,
+    "displayOrder": 9,
+    "eyebrow": "Shared Progress",
+    "title": "Achievements Across MBGA & Bharatgas",
+    "lead": "Published entries documenting factual service progress and brand relationships.",
+    "ctaText": "View All Achievements",
+    "limit": 3
+  },
+  "partnership": {
+    "published": true,
+    "displayOrder": 10,
+    "eyebrow": "MBGA × Bharatgas",
+    "title": "One Local Partner. One Trusted Energy Brand.",
+    "lead": "MBGA connects commercial and industrial customers with Bharatgas products through an organized, safety-led supply chain.",
+    "leftLabel": "Local Distribution Partner",
+    "leftTitle": "Madhav Bharat Gas Agency",
+    "leftDescription": "Customer onboarding, order coordination, cylinder exchange, account support and local delivery assistance.",
+    "bridgeTitle": "Associated Supply Chain",
+    "bridgeFlow": "Order → Plan → Dispatch → Exchange",
+    "rightLabel": "Brand & Product Network",
+    "rightTitle": "Bharatgas (BGA)",
+    "rightDescription": "Recognized LPG brand standards, a commercial cylinder portfolio and a strong national energy ecosystem."
+  },
+  "sustainability": {
+    "published": true,
+    "displayOrder": 11,
+    "eyebrow": "Responsible Operations",
+    "title": "Sustainability Through Smarter Supply",
+    "description": "Route planning, cylinder-return discipline, preventive safety checks and responsible resource use are built into how MBGA serves businesses.",
+    "ctaText": "Our Sustainability Approach",
+    "ctaLink": "/sustainability",
+    "limit": 3
+  },
+  "gallery": {
+    "published": true,
+    "displayOrder": 12,
+    "eyebrow": "Agency Moments",
+    "title": "Real Operations. Responsible Service.",
+    "ctaText": "View Full Gallery",
+    "limit": 3
+  },
+  "visit": {
+    "published": true,
+    "displayOrder": 13,
+    "eyebrow": "Agency Information",
+    "title": "Everything You Need, In One Place",
+    "lead": "Useful contact and office information for customers visiting or contacting the agency.",
+    "mapsUrl": ""
+  }
+}

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="620" viewBox="0 0 1920 620" role="img" aria-labelledby="bt-t bt-d">
+  <title id="bt-t">Wide view of an LPG storage and dispatch terminal</title>
+  <desc id="bt-d">A panoramic banner of bulk LPG storage bullets, process columns and a cylinder dispatch bank.</desc>
+  <defs>
+    <linearGradient id="bt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b7cc4"/><stop offset=".5" stop-color="#6fb2e4"/><stop offset="1" stop-color="#cfe6f7"/>
+    </linearGradient>
+    <linearGradient id="bt-tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".36" stop-color="#e2edf7"/><stop offset=".66" stop-color="#a8bdd0"/><stop offset="1" stop-color="#6f869c"/>
+    </linearGradient>
+    <linearGradient id="bt-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9db6cb"/><stop offset="1" stop-color="#5f7a93"/>
+    </linearGradient>
+    <linearGradient id="bt-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a63b4"/><stop offset=".3" stop-color="#3a9de6"/><stop offset=".58" stop-color="#0f6cba"/><stop offset="1" stop-color="#064a86"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="620" fill="url(#bt-sky)"/>
+  <circle cx="1520" cy="126" r="86" fill="#fff6cf" opacity=".55"/>
+  <circle cx="1520" cy="126" r="46" fill="#fffbe8" opacity=".8"/>
+
+  <g fill="#7ba4c6" opacity=".55">
+    <rect x="70" y="250" width="96" height="180"/><rect x="182" y="220" width="60" height="210"/>
+    <rect x="258" y="272" width="120" height="158"/><rect x="1610" y="240" width="80" height="190"/>
+    <rect x="1706" y="272" width="150" height="158"/>
+  </g>
+  <g opacity=".8">
+    <rect x="452" y="150" width="42" height="280" rx="9" fill="#7e9fbb"/>
+    <g fill="#6b8ca8"><rect x="442" y="196" width="62" height="9" rx="4"/><rect x="442" y="248" width="62" height="9" rx="4"/><rect x="442" y="300" width="62" height="9" rx="4"/></g>
+    <rect x="520" y="196" width="34" height="234" rx="8" fill="#7e9fbb"/>
+    <rect x="1180" y="130" width="38" height="300" rx="9" fill="#7e9fbb"/>
+    <g fill="#6b8ca8"><rect x="1170" y="182" width="58" height="9" rx="4"/><rect x="1170" y="238" width="58" height="9" rx="4"/></g>
+  </g>
+  <g stroke="#8db2d0" stroke-width="7" fill="none" opacity=".85">
+    <path d="M560 300h300M560 326h300"/><path d="M620 300v130M740 300v130M860 300v130"/>
+  </g>
+
+  <rect y="430" width="1920" height="190" fill="url(#bt-ground)"/>
+  <path d="M0 430h1920" stroke="#4b6a85" stroke-width="4" opacity=".5"/>
+
+  <g transform="translate(120 300) scale(.72)">
+    <ellipse cx="230" cy="196" rx="240" ry="26" fill="#3c556d" opacity=".3"/>
+    <rect x="52" y="60" width="356" height="118" rx="59" fill="url(#bt-tank)"/>
+    <ellipse cx="52" cy="119" rx="34" ry="59" fill="#cadcec"/><ellipse cx="408" cy="119" rx="34" ry="59" fill="#b3c8db"/>
+    <rect x="90" y="94" width="286" height="12" rx="6" fill="#ffffff" opacity=".6"/>
+    <rect x="118" y="140" width="224" height="18" rx="9" fill="#0057a8" opacity=".92"/>
+    <g fill="#5a7089"><rect x="96" y="178" width="20" height="40" rx="6"/><rect x="344" y="178" width="20" height="40" rx="6"/></g>
+    <rect x="70" y="214" width="320" height="12" rx="6" fill="#41586e"/>
+  </g>
+  <g transform="translate(860 316) scale(.62)">
+    <ellipse cx="230" cy="196" rx="230" ry="24" fill="#3c556d" opacity=".26"/>
+    <rect x="52" y="60" width="356" height="118" rx="59" fill="url(#bt-tank)"/>
+    <ellipse cx="52" cy="119" rx="34" ry="59" fill="#b9cee1"/><ellipse cx="408" cy="119" rx="34" ry="59" fill="#b9cee1"/>
+    <rect x="90" y="94" width="286" height="12" rx="6" fill="#ffffff" opacity=".5"/>
+    <rect x="118" y="140" width="224" height="18" rx="9" fill="#ffd21c" opacity=".9"/>
+    <g fill="#5a7089"><rect x="96" y="178" width="20" height="40" rx="6"/><rect x="344" y="178" width="20" height="40" rx="6"/></g>
+    <rect x="70" y="214" width="320" height="12" rx="6" fill="#41586e"/>
+  </g>
+
+  <g transform="translate(1300 356)">
+    <ellipse cx="196" cy="200" rx="230" ry="22" fill="#3c556d" opacity=".3"/>
+    <g stroke="#8fa6bb" stroke-width="8" fill="none" stroke-linecap="round">
+      <path d="M20 44h300"/><path d="M38 44v26M132 44v26M226 44v26M320 44v26"/>
+    </g>
+    <rect x="312" y="32" width="26" height="24" rx="6" fill="#ffd21c"/>
+    <g transform="translate(6 70)"><rect width="66" height="128" rx="20" fill="url(#bt-cyl)"/><rect y="88" width="66" height="18" fill="#ffd21c"/><rect x="20" y="-18" width="26" height="20" rx="6" fill="#89a0b6"/></g>
+    <g transform="translate(100 70)"><rect width="66" height="128" rx="20" fill="url(#bt-cyl)"/><rect y="88" width="66" height="18" fill="#ffd21c"/><rect x="20" y="-18" width="26" height="20" rx="6" fill="#89a0b6"/></g>
+    <g transform="translate(194 70)"><rect width="66" height="128" rx="20" fill="url(#bt-cyl)"/><rect y="88" width="66" height="18" fill="#ffd21c"/><rect x="20" y="-18" width="26" height="20" rx="6" fill="#89a0b6"/></g>
+    <g transform="translate(288 70)"><rect width="66" height="128" rx="20" fill="url(#bt-cyl)"/><rect y="88" width="66" height="18" fill="#ffd21c"/><rect x="20" y="-18" width="26" height="20" rx="6" fill="#89a0b6"/></g>
+    <rect x="-10" y="196" width="376" height="14" rx="7" fill="#41586e"/>
+  </g>
+
+  <g fill="#ffd21c" opacity=".6">
+    <rect x="60" y="580" width="80" height="9" rx="4"/><rect x="220" y="580" width="80" height="9" rx="4"/>
+    <rect x="380" y="580" width="80" height="9" rx="4"/><rect x="540" y="580" width="80" height="9" rx="4"/>
+    <rect x="700" y="580" width="80" height="9" rx="4"/><rect x="860" y="580" width="80" height="9" rx="4"/>
+    <rect x="1020" y="580" width="80" height="9" rx="4"/><rect x="1180" y="580" width="80" height="9" rx="4"/>
+    <rect x="1340" y="580" width="80" height="9" rx="4"/><rect x="1500" y="580" width="80" height="9" rx="4"/>
+    <rect x="1660" y="580" width="80" height="9" rx="4"/><rect x="1820" y="580" width="80" height="9" rx="4"/>
+  </g>
+</svg>

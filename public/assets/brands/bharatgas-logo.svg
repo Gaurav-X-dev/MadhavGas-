@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 76" role="img" aria-labelledby="title description">
+  <title id="title">Bharatgas</title>
+  <desc id="description">Bharatgas brand identity</desc>
+  <rect width="240" height="76" rx="16" fill="#fff"/>
+  <g transform="translate(24 16) rotate(45 22 22)">
+    <rect width="44" height="44" rx="4" fill="#ffd21f"/>
+    <rect x="10" y="10" width="24" height="24" rx="3" fill="#0057a8"/>
+    <circle cx="22" cy="22" r="7" fill="#fff"/>
+  </g>
+  <text x="84" y="45" fill="#063b70" font-family="Arial, sans-serif" font-size="28" font-style="italic" font-weight="800">Bharatgas</text>
+</svg>

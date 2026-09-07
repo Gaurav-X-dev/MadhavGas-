@@ -1,0 +1,68 @@
+{
+  "assist": {
+    "published": true,
+    "partnerKicker": "Your Local LPG Partner",
+    "kicker": "Get in touch",
+    "title": "How can we assist you?",
+    "description": "Choose the type of assistance you need and connect with our agency team.",
+    "options": [
+      {
+        "id": "assist-supply",
+        "icon": "flame",
+        "kicker": "Business Support",
+        "title": "Non-Domestic LPG Assistance",
+        "linkText": "Get in Touch",
+        "href": "/contact",
+        "displayOrder": 1
+      },
+      {
+        "id": "assist-service",
+        "icon": "headphones",
+        "kicker": "Service Enquiry",
+        "title": "MBGA Supply Chain Guidance",
+        "linkText": "Contact Agency",
+        "href": "/contact",
+        "displayOrder": 2
+      }
+    ],
+    "noteTitle": "Safety-led assistance",
+    "noteText": "Clear information from your local agency team.",
+    "noteLinkText": "Contact Us",
+    "noteHref": "/contact"
+  },
+  "videoHub": {
+    "published": true,
+    "eyebrow": "Watch & Learn",
+    "title": "LPG Safety Video Hub",
+    "lead": "Helpful visual guidance for safer cylinder handling and confident everyday LPG use.",
+    "countLabel": "Featured Guide",
+    "featuredEmbedUrl": "https://www.youtube.com/embed/sZCthJWXHio?rel=0",
+    "featuredKicker": "Official Safety Guide",
+    "featuredTitle": "LPG Safety Measures for Every Home",
+    "featuredDescription": "Learn essential precautions for safe cylinder use, regulator handling and a secure kitchen.",
+    "playlistKicker": "Knowledge Centre",
+    "playlistTitle": "More video topics",
+    "items": [
+      {
+        "id": "vid-regulator",
+        "title": "Regulator & Hose Safety",
+        "category": "Safety",
+        "duration": "04 min",
+        "url": "https://www.youtube.com/watch?v=sZCthJWXHio",
+        "thumbnailUrl": "/assets/industrial/industrial-safety.svg",
+        "displayOrder": 1
+      },
+      {
+        "id": "vid-delivery",
+        "title": "Safe Cylinder Delivery",
+        "category": "Service",
+        "duration": "03 min",
+        "url": "https://www.youtube.com/watch?v=sZCthJWXHio",
+        "thumbnailUrl": "/assets/industrial/bulk-delivery.svg",
+        "displayOrder": 2
+      }
+    ],
+    "channelLinkText": "Explore BPCL India videos",
+    "channelUrl": "https://www.youtube.com/@BPCLIndia"
+  }
+}

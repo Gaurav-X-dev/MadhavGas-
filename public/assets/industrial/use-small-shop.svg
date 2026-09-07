@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="uss-t uss-d">
+  <title id="uss-t">5 kg LPG cylinder at a small shop counter</title>
+  <desc id="uss-d">A tea and snacks stall running a single burner from a 5 kg commercial LPG cylinder kept in an open bay under the counter.</desc>
+  <defs>
+    <linearGradient id="uss-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4f7d"/><stop offset="1" stop-color="#0e3055"/>
+    </linearGradient>
+    <linearGradient id="uss-awning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd94a"/><stop offset="1" stop-color="#e8ac00"/>
+    </linearGradient>
+    <linearGradient id="uss-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f9fd"/><stop offset=".4" stop-color="#d3e2ee"/><stop offset="1" stop-color="#9db3c6"/>
+    </linearGradient>
+    <linearGradient id="uss-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#04407a"/><stop offset=".2" stop-color="#0a63b4"/><stop offset=".4" stop-color="#59b4ef"/><stop offset=".62" stop-color="#1276c4"/><stop offset="1" stop-color="#033761"/>
+    </linearGradient>
+    <radialGradient id="uss-glow" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#ffd21c" stop-opacity=".3"/><stop offset="1" stop-color="#ffd21c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#uss-wall)"/>
+  <g fill="#ffffff" opacity=".05">
+    <rect y="170" width="1200" height="3"/><rect y="330" width="1200" height="3"/>
+    <rect x="230" width="3" height="620"/><rect x="600" width="3" height="620"/><rect x="970" width="3" height="620"/>
+  </g>
+
+  <rect x="150" y="52" width="900" height="84" rx="10" fill="#0a2a4a"/>
+  <text x="600" y="108" fill="#ffd21c" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" letter-spacing="5" text-anchor="middle">TEA &amp; SNACKS</text>
+  <path d="M120 142h960l-44 86H164z" fill="url(#uss-awning)"/>
+  <g fill="#0a2a4a" opacity=".16">
+    <path d="M268 142l-28 86h-50l28-86zM468 142l-28 86h-50l28-86zM668 142l-28 86h-50l28-86zM868 142l-28 86h-50l28-86z"/>
+  </g>
+  <path d="M164 228h872v13H164z" fill="#c99400"/>
+
+  <ellipse cx="600" cy="600" rx="430" ry="240" fill="url(#uss-glow)"/>
+
+  <!-- shopkeeper stands behind the counter, drawn first so it sits behind it -->
+  <g transform="translate(742 296)">
+    <path d="M20 300V128a62 62 0 0 1 124 0v172z" fill="#eef5fb"/>
+    <path d="M20 178h124v13H20z" fill="#0f4577" opacity=".12"/>
+    <path d="M82 128h20v172H82z" fill="#d6e4f0"/>
+    <rect x="66" y="52" width="32" height="24" rx="10" fill="#d9ab7c"/>
+    <circle cx="82" cy="20" r="46" fill="#e2b98a"/>
+    <path d="M36 14a46 46 0 0 1 92 0c-10-16-27-24-46-24s-36 8-46 24z" fill="#2b3f52"/>
+    <path d="M144 168l86 40-14 30-88-36z" fill="#eef5fb"/>
+    <circle cx="232" cy="216" r="22" fill="#e2b98a"/>
+  </g>
+
+  <!-- counter: solid on the right, open bay on the left holding the cylinder -->
+  <g transform="translate(180 470)">
+    <rect x="0" y="0" width="660" height="30" rx="8" fill="url(#uss-top)"/>
+    <rect x="0" y="30" width="660" height="15" fill="#6f869c"/>
+    <path d="M0 45h660v250H0z" fill="#7f96ab"/>
+    <rect x="330" y="45" width="330" height="250" fill="#8ea4b8"/>
+    <rect x="366" y="92" width="258" height="160" rx="8" fill="#93a9be" stroke="#5f7488" stroke-width="4"/>
+    <rect x="470" y="164" width="50" height="13" rx="6" fill="#c6d6e4"/>
+    <!-- open storage bay -->
+    <rect x="34" y="70" width="256" height="200" rx="8" fill="#123a5f"/>
+    <rect x="34" y="70" width="256" height="200" rx="8" fill="none" stroke="#5f7488" stroke-width="5"/>
+    <rect x="-14" y="295" width="688" height="20" rx="10" fill="#41586e"/>
+  </g>
+
+  <!-- the 5 kg cylinder inside the bay, feeding the burner above it -->
+  <g transform="translate(258 566)">
+    <ellipse cx="52" cy="152" rx="72" ry="13" fill="#04162a" opacity=".55"/>
+    <rect x="0" y="16" width="104" height="136" rx="32" fill="url(#uss-cyl)"/>
+    <rect x="0" y="110" width="104" height="24" fill="#ffd21c"/>
+    <rect x="32" y="-10" width="40" height="28" rx="10" fill="#8299ad"/>
+    <rect x="18" y="-22" width="68" height="13" rx="6" fill="#647d94"/>
+    <rect x="20" y="44" width="64" height="44" rx="8" fill="#ffffff" opacity=".95"/>
+    <text x="52" y="74" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="900" text-anchor="middle">5</text>
+    <text x="52" y="103" fill="#eaf3fb" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="2" text-anchor="middle">KG</text>
+    <!-- hose runs straight up into the counter to the burner -->
+    <path d="M52 -22v-52" stroke="#e08a3c" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- burner and kettle sit on the counter directly above the cylinder -->
+  <g transform="translate(244 386)">
+    <ellipse cx="66" cy="88" rx="72" ry="12" fill="#0a2237" opacity=".4"/>
+    <circle cx="66" cy="78" r="46" fill="#41586e"/>
+    <circle cx="66" cy="78" r="30" fill="#2b3f52"/>
+    <path d="M66 76c-16-16-9-35 1-45-3 19 15 21 15 39 0 13-9 19-16 19s-11-6-9-13z" fill="#3aa2ff" opacity=".95"/>
+    <path d="M66 67c-8-8-4-18 1-23-2 10 7 11 7 20 0 6-4 9-8 9s-5-3-4-6z" fill="#ffd21c"/>
+    <rect x="-4" y="42" width="140" height="12" rx="6" fill="#8ea4b8"/>
+    <path d="M26 -2h80a14 14 0 0 1 14 14v30H12V12A14 14 0 0 1 26-2z" fill="#c3d5e5"/>
+    <rect x="50" y="-20" width="32" height="20" rx="9" fill="#8ea4b8"/>
+    <path d="M120 12h18a16 16 0 0 1 0 32h-18" fill="none" stroke="#8ea4b8" stroke-width="9"/>
+    <path d="M52 -34c-6-10 0-18 6-24-3 10 8 10 8 20" stroke="#ffffff" stroke-width="5" fill="none" opacity=".4" stroke-linecap="round"/>
+  </g>
+
+  <rect y="852" width="1200" height="48" fill="#08203a" opacity=".55"/>
+</svg>

@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env.local
+npm-debug.log*
+*.log
+*.tsbuildinfo
+postgres-reset-result.txt
+.bolt/
+public/uploads/*
+!public/uploads/.gitkeep
+qa-artifacts/

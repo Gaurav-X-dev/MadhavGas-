@@ -1,0 +1,298 @@
+{
+  "generatedAt": "2026-09-05T10:03:28.816Z",
+  "screenshots": [
+    {
+      "fileName": "01-admin-login.png",
+      "module": "Authentication",
+      "proof": "Admin login route renders without a 404 or redirect loop."
+    },
+    {
+      "fileName": "02-dashboard-baseline.png",
+      "module": "Dashboard",
+      "proof": "Dashboard loads from the clean operational baseline."
+    },
+    {
+      "fileName": "03-bharatgas-logo-upload.png",
+      "module": "Two-logo branding",
+      "proof": "Independent Bharatgas logo upload, preview, URL and alt-text field."
+    },
+    {
+      "fileName": "04-mbga-logo-upload.png",
+      "module": "Two-logo branding",
+      "proof": "Independent MBGA logo upload, preview, URL and alt-text field."
+    },
+    {
+      "fileName": "05-public-header-two-logos.png",
+      "module": "Public header",
+      "proof": "Desktop header renders two separately stored logo assets in a compact lockup."
+    },
+    {
+      "fileName": "06-hero-admin.png",
+      "module": "Hero",
+      "proof": "Hero admin loads the persisted title, image and controls."
+    },
+    {
+      "fileName": "07-hero-validation-error.png",
+      "module": "Hero validation",
+      "proof": "A missing hero image shows a friendly, field-specific inline error."
+    },
+    {
+      "fileName": "08-hero-image-upload.png",
+      "module": "Hero upload",
+      "proof": "Uploaded replacement hero preview and randomized local URL persist after reload."
+    },
+    {
+      "fileName": "09-hero-public-result.png",
+      "module": "Public hero",
+      "proof": "The uploaded hero and QA title render on the public home page with refined typography."
+    },
+    {
+      "fileName": "10-product-admin.png",
+      "module": "Products",
+      "proof": "QA product persisted in the admin catalog."
+    },
+    {
+      "fileName": "11-product-public.png",
+      "module": "Products",
+      "proof": "QA product renders publicly with its configured image and content."
+    },
+    {
+      "fileName": "12-gallery-admin.png",
+      "module": "Gallery",
+      "proof": "Uploaded QA gallery item is visible in admin."
+    },
+    {
+      "fileName": "13-gallery-public.png",
+      "module": "Gallery",
+      "proof": "Published QA gallery item renders publicly."
+    },
+    {
+      "fileName": "14-journey-admin.png",
+      "module": "Journey",
+      "proof": "Published, featured QA Journey milestone is visible in admin."
+    },
+    {
+      "fileName": "15-journey-public.png",
+      "module": "Journey",
+      "proof": "QA Journey milestone renders in the public timeline."
+    },
+    {
+      "fileName": "16-achievement-admin.png",
+      "module": "Achievements",
+      "proof": "QA achievement is persisted and published in admin."
+    },
+    {
+      "fileName": "17-achievement-public.png",
+      "module": "Achievements",
+      "proof": "Published QA achievement renders publicly."
+    },
+    {
+      "fileName": "18-sustainability-admin.png",
+      "module": "Sustainability",
+      "proof": "Saved responsible-operation content is present in the admin list."
+    },
+    {
+      "fileName": "19-sustainability-public.png",
+      "module": "Sustainability",
+      "proof": "Saved sustainability content renders publicly."
+    },
+    {
+      "fileName": "20-booking-submission-success.png",
+      "module": "Booking form",
+      "proof": "Valid booking submission returns a BKG reference in the public UI."
+    },
+    {
+      "fileName": "21-booking-admin.png",
+      "module": "Bookings",
+      "proof": "Public booking appears in the admin operations table."
+    },
+    {
+      "fileName": "22-enquiry-submission-success.png",
+      "module": "Enquiry form",
+      "proof": "Valid enquiry submission returns an ENQ reference in the public UI."
+    },
+    {
+      "fileName": "23-enquiry-admin.png",
+      "module": "Enquiries",
+      "proof": "Public enquiry appears in the admin operations table."
+    },
+    {
+      "fileName": "24-feedback-validation.png",
+      "module": "Feedback form",
+      "proof": "Missing rating/message produce visible field validation."
+    },
+    {
+      "fileName": "25-feedback-success.png",
+      "module": "Feedback form",
+      "proof": "Valid feedback returns an FBK reference in the public UI."
+    },
+    {
+      "fileName": "26-feedback-admin.png",
+      "module": "Feedback",
+      "proof": "Public feedback and rating appear in admin."
+    },
+    {
+      "fileName": "27-newsletter-invalid.png",
+      "module": "Newsletter",
+      "proof": "Invalid newsletter email displays an inline validation message."
+    },
+    {
+      "fileName": "28-newsletter-success.png",
+      "module": "Newsletter",
+      "proof": "Valid newsletter subscription displays a success state."
+    },
+    {
+      "fileName": "29-newsletter-admin.png",
+      "module": "Newsletter admin",
+      "proof": "Normalized subscriber appears in the authenticated admin list."
+    },
+    {
+      "fileName": "30-site-settings.png",
+      "module": "Site settings",
+      "proof": "Agency settings render from the database with a clear Save Changes action."
+    },
+    {
+      "fileName": "31-qr-settings.png",
+      "module": "QR settings",
+      "proof": "Local QR preview and safe booking fields render correctly."
+    },
+    {
+      "fileName": "32-smtp-status-test.png",
+      "module": "SMTP",
+      "proof": "Admin exposes safe configured/not-configured status and the real test action without secrets."
+    },
+    {
+      "fileName": "33-public-mobile-header.png",
+      "module": "Public mobile header",
+      "proof": "Two-logo mobile header stays compact at 390 px."
+    },
+    {
+      "fileName": "34-public-mobile-page.png",
+      "module": "Public mobile page",
+      "proof": "Home content and QR booking section remain readable at 390 px."
+    },
+    {
+      "fileName": "35-admin-responsive-menu.png",
+      "module": "Admin responsive layout",
+      "proof": "Mobile admin navigation opens without page overflow."
+    },
+    {
+      "fileName": "36-final-dashboard-test-data.png",
+      "module": "Dashboard",
+      "proof": "Final dashboard reflects temporary booking, enquiry and feedback test data."
+    },
+    {
+      "fileName": "37-footer-branding-qr.png",
+      "module": "Footer",
+      "proof": "Footer shows both brand assets and the requested Safety First QR booking block."
+    },
+    {
+      "fileName": "38-homepage-1380-container-desktop.png",
+      "module": "Global layout",
+      "proof": "Homepage uses the centered 1380px content system with balanced large-screen density."
+    },
+    {
+      "fileName": "39-journey-1380-bharatgas-selected.png",
+      "module": "Journey",
+      "proof": "Desktop Journey page shows the Bharatgas track in the 1380px layout."
+    },
+    {
+      "fileName": "40-journey-mbga-selected.png",
+      "module": "Journey",
+      "proof": "Segmented Journey control switches to the distinct Madhav Bharat Gas track."
+    },
+    {
+      "fileName": "41-journey-mobile-390.png",
+      "module": "Journey responsive",
+      "proof": "Journey becomes a clean single vertical timeline with the two-track selector at 390px."
+    },
+    {
+      "fileName": "42-sustainability-editorial-hero.png",
+      "module": "Sustainability",
+      "proof": "New editorial hero uses MBGA brand styling with a restrained sustainability accent."
+    },
+    {
+      "fileName": "43-sustainability-content-desktop.png",
+      "module": "Sustainability",
+      "proof": "Dynamic responsible-practice cards render in the desktop content grid."
+    },
+    {
+      "fileName": "44-sustainability-mobile-390.png",
+      "module": "Sustainability responsive",
+      "proof": "Editorial hero and content reflow without horizontal overflow at 390px."
+    },
+    {
+      "fileName": "45-local-lpg-information-desktop.png",
+      "module": "Local LPG Information",
+      "proof": "Dynamic localities, categories and topics use a composed desktop discovery grid."
+    },
+    {
+      "fileName": "46-local-lpg-mobile-accordion.png",
+      "module": "Local LPG Information responsive",
+      "proof": "Mobile discovery uses an accessible expanded accordion with dynamic locality data."
+    },
+    {
+      "fileName": "47-journey-admin-list.png",
+      "module": "Journey admin",
+      "proof": "Journey list shows track, order, publication status and consistent actions."
+    },
+    {
+      "fileName": "48-journey-new-full-page.png",
+      "module": "Journey admin",
+      "proof": "Add Journey Item opens a dedicated full-page form with publishing sidebar and sticky actions."
+    },
+    {
+      "fileName": "49-sustainability-admin-list.png",
+      "module": "Sustainability admin",
+      "proof": "Sustainability uses a searchable professional list instead of a form drawer."
+    },
+    {
+      "fileName": "50-sustainability-new-full-page.png",
+      "module": "Sustainability admin",
+      "proof": "Add Sustainability Item uses the shared full-page CRUD pattern."
+    },
+    {
+      "fileName": "51-product-new-full-page.png",
+      "module": "Product admin",
+      "proof": "Product creation uses structured main content, publishing sidebar and sticky Save action."
+    },
+    {
+      "fileName": "52-gallery-new-full-page.png",
+      "module": "Gallery admin",
+      "proof": "Gallery creation uses accessible media fields in a dedicated page."
+    },
+    {
+      "fileName": "53-achievement-new-full-page.png",
+      "module": "Achievements admin",
+      "proof": "Achievement creation shares the same professional full-page form system."
+    },
+    {
+      "fileName": "54-admin-dashboard-wide-1600.png",
+      "module": "Dashboard",
+      "proof": "Wide dashboard uses four metrics and a balanced two-thirds/one-third chart layout."
+    },
+    {
+      "fileName": "55-admin-tablet-768.png",
+      "module": "Admin responsive",
+      "proof": "Admin navigation and Journey records remain usable at the required tablet width."
+    },
+    {
+      "fileName": "56-dynamic-admin-db-public-result.png",
+      "module": "Dynamic verification",
+      "proof": "Temporary admin-saved locality is visibly rendered through API and PostgreSQL on the public homepage."
+    },
+    {
+      "fileName": "57-final-public-footer.png",
+      "module": "Footer",
+      "proof": "Final public footer retains both brands, Safety First QR and responsive column balance."
+    }
+  ],
+  "publicEvidenceViewportWidths": [
+    390,
+    1440,
+    1600
+  ],
+  "publicResponsiveAuditCommand": "npm run test:browser",
+  "adminResponsiveRenders": 168,
+  "browserFailures": []
+}

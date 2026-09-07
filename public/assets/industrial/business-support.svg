@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="bs-t bs-d">
+  <title id="bs-t">MBGA business account desk coordinating commercial LPG supply</title>
+  <desc id="bs-d">An agency account manager at a dispatch desk with an order board, delivery schedule and a commercial customer discussing cylinder supply.</desc>
+  <defs>
+    <linearGradient id="bs-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf3fb"/><stop offset="1" stop-color="#c6dcee"/>
+    </linearGradient>
+    <linearGradient id="bs-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f9fd"/><stop offset=".3" stop-color="#d8e6f2"/><stop offset="1" stop-color="#93a9be"/>
+    </linearGradient>
+    <linearGradient id="bs-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08528f"/><stop offset=".32" stop-color="#3d9de3"/><stop offset=".62" stop-color="#0d69b5"/><stop offset="1" stop-color="#054478"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="860" fill="url(#bs-bg)"/>
+  <circle cx="1000" cy="140" r="120" fill="#0057a8" opacity=".07"/>
+  <circle cx="150" cy="700" r="150" fill="#ffd21c" opacity=".12"/>
+
+  <g transform="translate(660 92)">
+    <rect width="420" height="290" rx="20" fill="#ffffff"/>
+    <rect width="420" height="60" rx="20" fill="#0057a8"/>
+    <rect y="40" width="420" height="20" fill="#0057a8"/>
+    <text x="28" y="39" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" letter-spacing="1">DISPATCH SCHEDULE</text>
+    <g fill="#e6eef6"><rect x="26" y="86" width="368" height="40" rx="8"/><rect x="26" y="140" width="368" height="40" rx="8"/><rect x="26" y="194" width="368" height="40" rx="8"/></g>
+    <g fill="#0057a8"><rect x="40" y="100" width="120" height="12" rx="6"/><rect x="40" y="154" width="150" height="12" rx="6"/><rect x="40" y="208" width="98" height="12" rx="6"/></g>
+    <g fill="#93a9be"><rect x="200" y="100" width="90" height="12" rx="6"/><rect x="230" y="154" width="60" height="12" rx="6"/><rect x="176" y="208" width="114" height="12" rx="6"/></g>
+    <g><rect x="316" y="94" width="66" height="24" rx="12" fill="#5be08a" opacity=".85"/><rect x="316" y="148" width="66" height="24" rx="12" fill="#ffd21c"/><rect x="316" y="202" width="66" height="24" rx="12" fill="#5be08a" opacity=".85"/></g>
+    <rect x="26" y="252" width="230" height="14" rx="7" fill="#c8d8e6"/>
+  </g>
+
+  <g transform="translate(96 120)">
+    <rect width="300" height="220" rx="18" fill="#ffffff"/>
+    <rect x="24" y="26" width="252" height="120" rx="10" fill="#0f4577"/>
+    <g stroke="#4fb0f5" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M50 122l44-40 40 26 42-56 46 32"/>
+    </g>
+    <g fill="#ffd21c"><circle cx="50" cy="122" r="7"/><circle cx="94" cy="82" r="7"/><circle cx="134" cy="108" r="7"/><circle cx="176" cy="52" r="7"/><circle cx="222" cy="84" r="7"/></g>
+    <g fill="#c8d8e6"><rect x="24" y="164" width="130" height="14" rx="7"/><rect x="24" y="188" width="90" height="14" rx="7"/></g>
+    <rect x="196" y="164" width="80" height="38" rx="10" fill="#ffd21c"/>
+  </g>
+
+  <g transform="translate(342 300)">
+    <ellipse cx="118" cy="472" rx="130" ry="20" fill="#20364b" opacity=".22"/>
+    <path d="M56 470V262a62 62 0 0 1 124 0v208z" fill="#0057a8"/>
+    <path d="M96 200h48v70H96z" fill="#e2b98a"/>
+    <path d="M56 268c14-20 34-30 62-30s48 10 62 30l-24 26-38-16-38 16z" fill="#ffffff"/>
+    <path d="M118 238l-16 30 16 20 16-20z" fill="#ffd21c"/>
+    <circle cx="118" cy="150" r="56" fill="#f0c9a4"/>
+    <path d="M62 148c0-42 24-66 56-66s56 24 56 66c0-6-24-22-56-22s-56 16-56 22z" fill="#2b3f52"/>
+    <path d="M180 300l86 60-18 30-88-58z" fill="#0057a8"/>
+    <circle cx="268" cy="374" r="26" fill="#f0c9a4"/>
+  </g>
+
+  <g transform="translate(722 386)">
+    <ellipse cx="110" cy="386" rx="126" ry="18" fill="#20364b" opacity=".2"/>
+    <path d="M52 384V228a58 58 0 0 1 116 0v156z" fill="#123a5f"/>
+    <path d="M52 234c14-18 32-28 58-28s44 10 58 28l-22 24-36-14-36 14z" fill="#ffd21c"/>
+    <circle cx="110" cy="132" r="52" fill="#e2b98a"/>
+    <path d="M58 130c0-40 22-62 52-62s52 22 52 62c-8-24-28-32-52-32s-44 8-52 32z" fill="#3a2b22"/>
+    <path d="M52 262L-16 320l16 28 70-50z" fill="#123a5f"/>
+    <circle cx="-8" cy="336" r="24" fill="#e2b98a"/>
+  </g>
+
+  <g transform="translate(150 616)">
+    <rect x="0" y="0" width="920" height="34" rx="10" fill="url(#bs-desk)"/>
+    <rect x="0" y="34" width="920" height="14" fill="#7c92a7"/>
+    <rect x="60" y="48" width="26" height="180" fill="#93a9be"/>
+    <rect x="834" y="48" width="26" height="180" fill="#93a9be"/>
+    <rect x="20" y="228" width="880" height="18" rx="9" fill="#5f7488"/>
+  </g>
+
+  <g transform="translate(232 470)">
+    <rect x="0" y="0" width="180" height="118" rx="12" fill="#123a5f"/>
+    <rect x="12" y="12" width="156" height="82" rx="6" fill="#4fb0f5" opacity=".9"/>
+    <g fill="#0b3459" opacity=".45"><rect x="26" y="26" width="80" height="9" rx="4"/><rect x="26" y="44" width="120" height="9" rx="4"/><rect x="26" y="62" width="60" height="9" rx="4"/></g>
+    <rect x="-16" y="118" width="212" height="14" rx="7" fill="#5f7488"/>
+  </g>
+
+  <g transform="translate(940 496)">
+    <ellipse cx="72" cy="150" rx="90" ry="14" fill="#20364b" opacity=".22"/>
+    <g transform="translate(0 32)">
+      <rect width="62" height="120" rx="20" fill="url(#bs-cyl)"/>
+      <rect y="82" width="62" height="18" fill="#ffd21c"/>
+      <rect x="19" y="-16" width="24" height="19" rx="6" fill="#8299ad"/>
+      <rect x="9" y="-24" width="44" height="9" rx="4" fill="#647d94"/>
+    </g>
+    <g transform="translate(76 32)">
+      <rect width="62" height="120" rx="20" fill="url(#bs-cyl)"/>
+      <rect y="82" width="62" height="18" fill="#ffd21c"/>
+      <rect x="19" y="-16" width="24" height="19" rx="6" fill="#8299ad"/>
+      <rect x="9" y="-24" width="44" height="9" rx="4" fill="#647d94"/>
+    </g>
+  </g>
+</svg>

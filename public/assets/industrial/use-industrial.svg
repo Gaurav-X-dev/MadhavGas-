@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="ui-t ui-d">
+  <title id="ui-t">47.5 kg LPG cylinder bank feeding an industrial furnace</title>
+  <desc id="ui-d">A manifold bank of 47.5 kg industrial LPG cylinders with a changeover regulator, piped into a process furnace on a plant floor.</desc>
+  <defs>
+    <linearGradient id="ui-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8e7f4"/><stop offset="1" stop-color="#adc6dc"/>
+    </linearGradient>
+    <linearGradient id="ui-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#94aabf"/><stop offset="1" stop-color="#5c7288"/>
+    </linearGradient>
+    <linearGradient id="ui-furnace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ca2b7"/><stop offset=".45" stop-color="#6c839a"/><stop offset="1" stop-color="#465d74"/>
+    </linearGradient>
+    <linearGradient id="ui-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#04407a"/><stop offset=".2" stop-color="#0a63b4"/><stop offset=".4" stop-color="#59b4ef"/><stop offset=".62" stop-color="#1276c4"/><stop offset="1" stop-color="#033761"/>
+    </linearGradient>
+    <radialGradient id="ui-fire" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffb02e" stop-opacity=".85"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#ui-wall)"/>
+  <g stroke="#9db6cc" stroke-width="3" opacity=".55" fill="none">
+    <path d="M0 110h1200M0 240h1200M0 370h1200M0 500h1200"/>
+    <path d="M160 0v640M420 0v640M680 0v640M940 0v640"/>
+  </g>
+  <rect y="640" width="1200" height="260" fill="url(#ui-floor)"/>
+  <path d="M0 640h1200" stroke="#41586e" stroke-width="5"/>
+  <g fill="#ffd21c" opacity=".35"><rect y="662" width="1200" height="10"/></g>
+
+  <!-- process furnace on the right, fed from the cylinder bank -->
+  <g transform="translate(720 250)">
+    <ellipse cx="200" cy="404" rx="240" ry="26" fill="#20364b" opacity=".3"/>
+    <rect x="60" y="60" width="280" height="330" rx="18" fill="url(#ui-furnace)"/>
+    <rect x="60" y="60" width="280" height="34" rx="12" fill="#5c7288"/>
+    <rect x="176" y="-72" width="48" height="134" fill="#6c839a"/>
+    <rect x="160" y="-92" width="80" height="26" rx="8" fill="#5c7288"/>
+    <g opacity=".7">
+      <path d="M200 -104c-16-20-9-38 1-48-3 20 14 22 14 40 0 13-8 20-15 20s-10-6-8-12z" fill="#c9dbeb"/>
+    </g>
+    <rect x="98" y="128" width="204" height="150" rx="12" fill="#2b3f52"/>
+    <ellipse cx="200" cy="203" rx="86" ry="62" fill="url(#ui-fire)"/>
+    <path d="M200 250c-30-30-17-66 2-86-6 35 26 39 26 71 0 24-15 35-28 35s-19-11-15-23z" fill="#ff7a2f"/>
+    <path d="M200 232c-14-14-8-31 1-40-3 16 12 18 12 33 0 11-7 16-13 16s-9-5-7-11z" fill="#ffd21c"/>
+    <rect x="98" y="300" width="204" height="20" rx="8" fill="#41586e"/>
+    <g fill="#c3d5e5"><circle cx="130" cy="352" r="14"/><circle cx="176" cy="352" r="14"/></g>
+    <rect x="212" y="338" width="80" height="28" rx="8" fill="#8ea4b8"/>
+    <rect x="40" y="388" width="320" height="20" rx="10" fill="#41586e"/>
+  </g>
+
+  <!-- feed line from the bank to the furnace burner -->
+  <g stroke="#7c92a7" stroke-width="14" fill="none" stroke-linecap="round">
+    <path d="M470 300h230a30 30 0 0 1 30 30v70"/>
+  </g>
+
+  <!-- changeover regulator -->
+  <g transform="translate(376 236)">
+    <rect width="156" height="88" rx="16" fill="#5f7488"/>
+    <rect x="14" y="14" width="128" height="44" rx="8" fill="#c3d5e5"/>
+    <circle cx="48" cy="36" r="16" fill="#ffffff" stroke="#41586e" stroke-width="4"/>
+    <path d="M48 36l10-10" stroke="#c8102e" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="110" cy="36" r="16" fill="#ffffff" stroke="#41586e" stroke-width="4"/>
+    <path d="M110 36l-10-10" stroke="#c8102e" stroke-width="4" stroke-linecap="round"/>
+    <rect x="62" y="64" width="34" height="34" rx="9" fill="#ffd21c"/>
+  </g>
+
+  <!-- the 47.5 kg cylinder bank -->
+  <g transform="translate(96 340)">
+    <ellipse cx="212" cy="332" rx="266" ry="26" fill="#20364b" opacity=".3"/>
+    <g stroke="#8ea4b8" stroke-width="12" fill="none" stroke-linecap="round">
+      <path d="M40 20h344"/><path d="M40 20v30M155 20v30M270 20v30M384 20v30"/><path d="M384 20h44a28 28 0 0 1 28 28v46"/>
+    </g>
+    <g transform="translate(0 50)">
+      <rect width="96" height="268" rx="32" fill="url(#ui-cyl)"/><rect y="192" width="96" height="30" fill="#ffd21c"/>
+      <rect x="31" y="-28" width="34" height="32" rx="9" fill="#8299ad"/><rect x="18" y="-40" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="12" y="74" width="72" height="46" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="48" y="106" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle">47.5</text>
+    </g>
+    <g transform="translate(115 50)">
+      <rect width="96" height="268" rx="32" fill="url(#ui-cyl)"/><rect y="192" width="96" height="30" fill="#ffd21c"/>
+      <rect x="31" y="-28" width="34" height="32" rx="9" fill="#8299ad"/><rect x="18" y="-40" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="12" y="74" width="72" height="46" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="48" y="106" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle">47.5</text>
+    </g>
+    <g transform="translate(230 50)">
+      <rect width="96" height="268" rx="32" fill="url(#ui-cyl)"/><rect y="192" width="96" height="30" fill="#ffd21c"/>
+      <rect x="31" y="-28" width="34" height="32" rx="9" fill="#8299ad"/><rect x="18" y="-40" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="12" y="74" width="72" height="46" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="48" y="106" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle">47.5</text>
+    </g>
+    <g transform="translate(345 50)">
+      <rect width="96" height="268" rx="32" fill="url(#ui-cyl)"/><rect y="192" width="96" height="30" fill="#ffd21c"/>
+      <rect x="31" y="-28" width="34" height="32" rx="9" fill="#8299ad"/><rect x="18" y="-40" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="12" y="74" width="72" height="46" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="48" y="106" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="900" text-anchor="middle">47.5</text>
+    </g>
+    <rect x="-18" y="318" width="478" height="18" rx="9" fill="#41586e"/>
+  </g>
+</svg>

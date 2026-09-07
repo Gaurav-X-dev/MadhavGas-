@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="ur-t ur-d">
+  <title id="ur-t">19 kg LPG cylinders supplying a restaurant kitchen</title>
+  <desc id="ur-d">A restaurant cooking range with two high-pressure burners and a chef, fed from a pair of 19 kg commercial LPG cylinders standing beside the range.</desc>
+  <defs>
+    <linearGradient id="ur-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20415f"/><stop offset="1" stop-color="#0d2942"/>
+    </linearGradient>
+    <linearGradient id="ur-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f7fc"/><stop offset=".32" stop-color="#d5e2ee"/><stop offset="1" stop-color="#7c92a7"/>
+    </linearGradient>
+    <linearGradient id="ur-hood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf2f9"/><stop offset=".55" stop-color="#b3c6d6"/><stop offset="1" stop-color="#7f96ab"/>
+    </linearGradient>
+    <linearGradient id="ur-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#04407a"/><stop offset=".2" stop-color="#0a63b4"/><stop offset=".4" stop-color="#59b4ef"/><stop offset=".62" stop-color="#1276c4"/><stop offset="1" stop-color="#033761"/>
+    </linearGradient>
+    <radialGradient id="ur-heat" cx=".42" cy=".62" r=".55">
+      <stop offset="0" stop-color="#ffd21c" stop-opacity=".4"/><stop offset="1" stop-color="#ffd21c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#ur-wall)"/>
+  <g fill="#ffffff" opacity=".045">
+    <rect y="130" width="1200" height="4"/><rect y="280" width="1200" height="4"/><rect y="430" width="1200" height="4"/>
+    <rect x="200" width="4" height="560"/><rect x="470" width="4" height="560"/><rect x="740" width="4" height="560"/><rect x="1010" width="4" height="560"/>
+  </g>
+
+  <!-- extraction hood over the range -->
+  <path d="M180 60h620l70 150H110z" fill="url(#ur-hood)"/>
+  <rect x="96" y="210" width="648" height="30" rx="10" fill="#8ea4b8"/>
+  <rect x="128" y="221" width="584" height="9" rx="4" fill="#0e2942" opacity=".35"/>
+  <g fill="#ffd21c" opacity=".85"><rect x="220" y="150" width="110" height="11" rx="5"/><rect x="530" y="150" width="110" height="11" rx="5"/></g>
+
+  <ellipse cx="470" cy="600" rx="420" ry="220" fill="url(#ur-heat)"/>
+
+  <!-- chef behind the range -->
+  <g transform="translate(360 296)">
+    <path d="M28 300V150a52 52 0 0 1 104 0v150z" fill="#f2f7fc"/>
+    <path d="M28 196h104v11H28z" fill="#0f4577" opacity=".12"/>
+    <path d="M70 150h20v150H70z" fill="#dbe8f3"/>
+    <rect x="64" y="80" width="32" height="22" rx="10" fill="#d9ab7c"/>
+    <circle cx="80" cy="46" r="42" fill="#e2b98a"/>
+    <path d="M32 30a48 48 0 0 1 96 0c0 9-96 9-96 0z" fill="#ffffff"/>
+    <path d="M26 26h108v18H26z" fill="#e6eef6"/>
+    <path d="M132 186l92 42-15 30-94-38z" fill="#f2f7fc"/>
+    <circle cx="226" cy="238" r="21" fill="#e2b98a"/>
+  </g>
+
+  <!-- two-burner cooking range -->
+  <g transform="translate(150 470)">
+    <rect x="0" y="0" width="640" height="32" rx="8" fill="url(#ur-steel)"/>
+    <rect x="0" y="32" width="640" height="16" fill="#5f7488"/>
+    <rect x="0" y="48" width="640" height="215" fill="#7a90a5"/>
+    <g fill="#8ea4b8" stroke="#5f7488" stroke-width="4">
+      <rect x="40" y="92" width="250" height="140" rx="8"/><rect x="330" y="92" width="250" height="140" rx="8"/>
+    </g>
+    <g fill="#c6d6e4"><rect x="145" y="155" width="44" height="13" rx="6"/><rect x="435" y="155" width="44" height="13" rx="6"/></g>
+    <rect x="-14" y="263" width="668" height="20" rx="10" fill="#41586e"/>
+  </g>
+
+  <g>
+    <g transform="translate(212 388)">
+      <ellipse cx="66" cy="86" rx="70" ry="11" fill="#0a2237" opacity=".45"/>
+      <circle cx="66" cy="76" r="48" fill="#41586e"/><circle cx="66" cy="76" r="31" fill="#2b3f52"/>
+      <path d="M66 74c-17-17-9-36 1-46-3 19 15 21 15 40 0 13-9 19-16 19s-11-6-9-13z" fill="#3aa2ff" opacity=".95"/>
+      <path d="M66 65c-8-8-4-18 1-23-2 10 7 11 7 20 0 6-4 9-8 9s-5-3-4-6z" fill="#ffd21c"/>
+      <rect x="-6" y="38" width="144" height="13" rx="6" fill="#8ea4b8"/>
+      <path d="M14 20h104a10 10 0 0 1 10 10v10H4V30a10 10 0 0 1 10-10z" fill="#5f7488"/>
+    </g>
+    <g transform="translate(502 388)">
+      <ellipse cx="66" cy="86" rx="70" ry="11" fill="#0a2237" opacity=".45"/>
+      <circle cx="66" cy="76" r="48" fill="#41586e"/><circle cx="66" cy="76" r="31" fill="#2b3f52"/>
+      <path d="M66 74c-17-17-9-36 1-46-3 19 15 21 15 40 0 13-9 19-16 19s-11-6-9-13z" fill="#3aa2ff" opacity=".95"/>
+      <path d="M66 65c-8-8-4-18 1-23-2 10 7 11 7 20 0 6-4 9-8 9s-5-3-4-6z" fill="#ffd21c"/>
+      <rect x="-6" y="38" width="144" height="13" rx="6" fill="#8ea4b8"/>
+      <path d="M14 20h104a10 10 0 0 1 10 10v10H4V30a10 10 0 0 1 10-10z" fill="#5f7488"/>
+    </g>
+  </g>
+
+  <!-- the pair of 19 kg cylinders feeding the range -->
+  <g transform="translate(846 512)">
+    <ellipse cx="132" cy="238" rx="176" ry="22" fill="#0a2237" opacity=".45"/>
+    <g stroke="#8ea4b8" stroke-width="10" fill="none" stroke-linecap="round">
+      <path d="M62 16h140"/><path d="M62 16v22M202 16v22"/><path d="M62 16H-30a26 26 0 0 0-26 26v58"/>
+    </g>
+    <rect x="122" y="0" width="30" height="26" rx="8" fill="#ffd21c"/>
+    <g transform="translate(16 38)">
+      <rect width="92" height="196" rx="29" fill="url(#ur-cyl)"/>
+      <rect y="136" width="92" height="26" fill="#ffd21c"/>
+      <rect x="29" y="-24" width="34" height="28" rx="9" fill="#8299ad"/>
+      <rect x="16" y="-36" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="18" y="52" width="56" height="42" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="46" y="82" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" text-anchor="middle">19</text>
+    </g>
+    <g transform="translate(156 38)">
+      <rect width="92" height="196" rx="29" fill="url(#ur-cyl)"/>
+      <rect y="136" width="92" height="26" fill="#ffd21c"/>
+      <rect x="29" y="-24" width="34" height="28" rx="9" fill="#8299ad"/>
+      <rect x="16" y="-36" width="60" height="14" rx="7" fill="#647d94"/>
+      <rect x="18" y="52" width="56" height="42" rx="8" fill="#ffffff" opacity=".95"/>
+      <text x="46" y="82" fill="#0057a8" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" text-anchor="middle">19</text>
+    </g>
+    <rect x="-16" y="234" width="296" height="16" rx="8" fill="#41586e"/>
+  </g>
+
+  <rect y="852" width="1200" height="48" fill="#08203a" opacity=".5"/>
+</svg>

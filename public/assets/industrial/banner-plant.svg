@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="620" viewBox="0 0 1920 620" role="img" aria-labelledby="bp-t bp-d">
+  <title id="bp-t">Wide view of an industrial LPG installation</title>
+  <desc id="bp-d">A panoramic banner of a bulk LPG tank, pipe rack, manifold cylinder bank and control panel on a plant site.</desc>
+  <defs>
+    <linearGradient id="bp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f2fb"/><stop offset=".55" stop-color="#cfe2f4"/><stop offset="1" stop-color="#b3cde5"/>
+    </linearGradient>
+    <linearGradient id="bp-tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".38" stop-color="#dfeaf5"/><stop offset=".7" stop-color="#a6bcd1"/><stop offset="1" stop-color="#728aa1"/>
+    </linearGradient>
+    <linearGradient id="bp-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#93a9be"/><stop offset="1" stop-color="#5c7288"/>
+    </linearGradient>
+    <linearGradient id="bp-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08528f"/><stop offset=".32" stop-color="#3d9de3"/><stop offset=".62" stop-color="#0d69b5"/><stop offset="1" stop-color="#054478"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="620" fill="url(#bp-sky)"/>
+  <circle cx="1600" cy="120" r="78" fill="#ffd21c" opacity=".24"/>
+
+  <g fill="#9fb8ce" opacity=".62">
+    <rect x="40" y="212" width="120" height="228"/><rect x="176" y="180" width="70" height="260"/>
+    <rect x="1700" y="200" width="130" height="240"/>
+  </g>
+  <g stroke="#8aa4bd" stroke-width="7" fill="none" opacity=".75">
+    <path d="M86 212v-70h40v70M106 142v-32"/>
+  </g>
+
+  <g>
+    <rect x="330" y="120" width="40" height="320" rx="9" fill="#7d97ae"/>
+    <rect x="330" y="120" width="15" height="320" fill="#96aec3"/>
+    <g fill="#647d94"><rect x="320" y="170" width="60" height="9" rx="4"/><rect x="320" y="226" width="60" height="9" rx="4"/><rect x="320" y="282" width="60" height="9" rx="4"/></g>
+    <path d="M330 120a20 20 0 0 1 40 0" fill="#7d97ae"/>
+  </g>
+  <g stroke="#8aa4bd" stroke-width="10" fill="none" stroke-linecap="round" opacity=".95">
+    <path d="M370 196h280M370 232h280"/><path d="M650 196v150M686 232v114"/>
+  </g>
+  <g fill="#ffd21c"><rect x="486" y="184" width="30" height="24" rx="6"/><rect x="560" y="220" width="30" height="24" rx="6"/></g>
+
+  <rect y="440" width="1920" height="180" fill="url(#bp-ground)"/>
+  <path d="M0 440h1920" stroke="#41586e" stroke-width="5"/>
+  <g stroke="#ffffff" stroke-width="5" opacity=".2" fill="none"><path d="M0 512h1920M0 572h1920"/></g>
+
+  <g transform="translate(700 250) scale(.86)">
+    <ellipse cx="290" cy="236" rx="330" ry="30" fill="#20364b" opacity=".28"/>
+    <rect x="70" y="52" width="440" height="152" rx="76" fill="url(#bp-tank)"/>
+    <ellipse cx="70" cy="128" rx="44" ry="76" fill="#c9dbeb"/><ellipse cx="510" cy="128" rx="44" ry="76" fill="#b6cbdd"/>
+    <rect x="118" y="86" width="352" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+    <rect x="150" y="160" width="290" height="22" rx="11" fill="#0057a8"/>
+    <g fill="#8299ad"><rect x="182" y="24" width="42" height="32" rx="8"/><rect x="366" y="24" width="42" height="32" rx="8"/></g>
+    <rect x="168" y="10" width="70" height="16" rx="8" fill="#647d94"/><rect x="352" y="10" width="70" height="16" rx="8" fill="#647d94"/>
+    <g fill="#5a7089"><rect x="120" y="204" width="26" height="52" rx="8"/><rect x="434" y="204" width="26" height="52" rx="8"/></g>
+    <rect x="86" y="252" width="408" height="16" rx="8" fill="#41586e"/>
+    <circle cx="470" cy="128" r="22" fill="#ffd21c"/><circle cx="470" cy="128" r="9" fill="#ffffff" opacity=".8"/>
+  </g>
+
+  <g transform="translate(112 322)">
+    <ellipse cx="118" cy="150" rx="150" ry="18" fill="#20364b" opacity=".26"/>
+    <g stroke="#8aa4bd" stroke-width="7" fill="none" stroke-linecap="round">
+      <path d="M18 4h222"/><path d="M35 4v26M119 4v26M203 4v26"/>
+    </g>
+    <g transform="translate(0 32)"><rect width="70" height="118" rx="22" fill="url(#bp-cyl)"/><rect y="80" width="70" height="18" fill="#ffd21c"/><rect x="21" y="-18" width="28" height="20" rx="6" fill="#8299ad"/></g>
+    <g transform="translate(84 32)"><rect width="70" height="118" rx="22" fill="url(#bp-cyl)"/><rect y="80" width="70" height="18" fill="#ffd21c"/><rect x="21" y="-18" width="28" height="20" rx="6" fill="#8299ad"/></g>
+    <g transform="translate(168 32)"><rect width="70" height="118" rx="22" fill="url(#bp-cyl)"/><rect y="80" width="70" height="18" fill="#ffd21c"/><rect x="21" y="-18" width="28" height="20" rx="6" fill="#8299ad"/></g>
+    <rect x="-10" y="150" width="278" height="14" rx="7" fill="#41586e"/>
+  </g>
+
+  <g transform="translate(1420 300)">
+    <rect width="140" height="110" rx="14" fill="#0f4577"/>
+    <rect x="12" y="14" width="116" height="58" rx="8" fill="#7fd0ff" opacity=".85"/>
+    <g fill="#0b3459" opacity=".5"><rect x="22" y="26" width="64" height="8" rx="4"/><rect x="22" y="42" width="42" height="8" rx="4"/><rect x="22" y="58" width="82" height="8" rx="4"/></g>
+    <circle cx="32" cy="90" r="9" fill="#ffd21c"/><circle cx="62" cy="90" r="9" fill="#5be08a"/><circle cx="92" cy="90" r="9" fill="#ff7a2f"/>
+    <rect x="62" y="110" width="16" height="28" fill="#41586e"/><rect x="32" y="138" width="76" height="12" rx="6" fill="#41586e"/>
+  </g>
+
+  <g transform="translate(1300 296)">
+    <ellipse cx="38" cy="152" rx="46" ry="10" fill="#20364b" opacity=".28"/>
+    <path d="M12 148V82a26 26 0 0 1 52 0v66z" fill="#ffd21c"/>
+    <rect x="12" y="102" width="52" height="11" fill="#0f4577" opacity=".25"/>
+    <path d="M20 148h16v-36H20zM40 148h16v-36H40z" fill="#123a5f"/>
+    <circle cx="38" cy="54" r="23" fill="#f0c9a4"/>
+    <path d="M14 50a24 24 0 0 1 48 0z" fill="#ffffff"/><path d="M10 50h56v9H10z" fill="#e6eef6"/>
+    <path d="M64 92l30 20-7 13-34-22z" fill="#ffd21c"/>
+  </g>
+</svg>

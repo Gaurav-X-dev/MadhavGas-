@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 76" role="img" aria-labelledby="title description">
+  <title id="title">Madhav Bharat Gas Agency</title>
+  <desc id="description">MBGA agency identity</desc>
+  <rect width="240" height="76" rx="16" fill="#0057a8"/>
+  <path d="M24 53V23h8l10 16 10-16h8v30h-8V36L42 51 32 36v17z" fill="#fff"/>
+  <text x="72" y="39" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">MBGA</text>
+  <text x="72" y="57" fill="#cfe7ff" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">MADHAV BHARAT GAS AGENCY</text>
+</svg>

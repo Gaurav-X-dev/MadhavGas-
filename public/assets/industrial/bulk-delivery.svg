@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="bd-t bd-d">
+  <title id="bd-t">Bulk LPG road tanker and commercial cylinder dispatch truck</title>
+  <desc id="bd-d">A road tanker carrying bulk LPG alongside a loaded commercial cylinder truck leaving the distribution yard.</desc>
+  <defs>
+    <linearGradient id="bd-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b3560"/><stop offset=".6" stop-color="#1a6aab"/><stop offset="1" stop-color="#4b9ad4"/>
+    </linearGradient>
+    <linearGradient id="bd-tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".32" stop-color="#e2edf7"/><stop offset=".62" stop-color="#a8bdd0"/><stop offset="1" stop-color="#6f869c"/>
+    </linearGradient>
+    <linearGradient id="bd-cab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a7ad0"/><stop offset=".55" stop-color="#0a5fa8"/><stop offset="1" stop-color="#05416f"/>
+    </linearGradient>
+    <linearGradient id="bd-road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3d5570"/><stop offset="1" stop-color="#1d3049"/>
+    </linearGradient>
+    <linearGradient id="bd-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08528f"/><stop offset=".32" stop-color="#3d9de3"/><stop offset=".62" stop-color="#0d69b5"/><stop offset="1" stop-color="#054478"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="860" fill="url(#bd-sky)"/>
+  <circle cx="230" cy="150" r="88" fill="#ffd21c" opacity=".2"/>
+  <circle cx="230" cy="150" r="48" fill="#ffd21c" opacity=".3"/>
+
+  <g fill="#0d4577" opacity=".8">
+    <rect x="0" y="360" width="130" height="200"/><rect x="150" y="410" width="90" height="150"/>
+    <rect x="880" y="340" width="150" height="220"/><rect x="1050" y="392" width="150" height="168"/>
+  </g>
+  <g opacity=".85">
+    <rect x="640" y="288" width="40" height="272" rx="9" fill="#0d4577"/>
+    <g fill="#1d6aa8"><rect x="630" y="342" width="60" height="9" rx="4"/><rect x="630" y="400" width="60" height="9" rx="4"/></g>
+    <rect x="300" y="330" width="200" height="70" rx="35" fill="#0d4577"/>
+    <ellipse cx="300" cy="365" rx="22" ry="35" fill="#12558f"/>
+    <ellipse cx="500" cy="365" rx="22" ry="35" fill="#12558f"/>
+    <g fill="#0d4577"><rect x="318" y="400" width="16" height="40"/><rect x="466" y="400" width="16" height="40"/></g>
+  </g>
+
+  <rect y="560" width="1200" height="300" fill="url(#bd-road)"/>
+  <path d="M0 560h1200" stroke="#5c7ea3" stroke-width="5"/>
+  <g fill="#ffd21c" opacity=".65">
+    <rect x="40" y="820" width="110" height="10" rx="5"/><rect x="230" y="820" width="110" height="10" rx="5"/>
+    <rect x="420" y="820" width="110" height="10" rx="5"/><rect x="610" y="820" width="110" height="10" rx="5"/>
+    <rect x="800" y="820" width="110" height="10" rx="5"/><rect x="990" y="820" width="110" height="10" rx="5"/>
+  </g>
+
+  <g transform="translate(546 300) scale(.62)" opacity=".7">
+    <rect x="150" y="150" width="300" height="150" rx="24" fill="#0d4577"/>
+    <rect x="60" y="180" width="110" height="120" rx="18" fill="#12558f"/>
+    <circle cx="130" cy="316" r="30" fill="#081f36"/><circle cx="330" cy="316" r="30" fill="#081f36"/><circle cx="410" cy="316" r="30" fill="#081f36"/>
+  </g>
+
+  <g transform="translate(70 452)">
+    <ellipse cx="470" cy="336" rx="500" ry="30" fill="#04182c" opacity=".45"/>
+    <rect x="250" y="86" width="500" height="150" rx="75" fill="url(#bd-tank)"/>
+    <ellipse cx="250" cy="161" rx="42" ry="75" fill="#cadcec"/>
+    <ellipse cx="750" cy="161" rx="42" ry="75" fill="#b3c8db"/>
+    <rect x="292" y="120" width="416" height="14" rx="7" fill="#ffffff" opacity=".7"/>
+    <rect x="330" y="176" width="340" height="26" rx="13" fill="#0057a8"/>
+    <text x="500" y="196" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" letter-spacing="3" text-anchor="middle">BULK LPG</text>
+    <g fill="#8299ad"><rect x="380" y="58" width="46" height="32" rx="8"/><rect x="574" y="58" width="46" height="32" rx="8"/></g>
+    <rect x="368" y="44" width="70" height="16" rx="8" fill="#647d94"/>
+    <rect x="562" y="44" width="70" height="16" rx="8" fill="#647d94"/>
+
+    <path d="M60 130h140a26 26 0 0 1 26 26v106H60z" fill="url(#bd-cab)"/>
+    <path d="M84 152h96a16 16 0 0 1 16 16v42H84z" fill="#9fdcff" opacity=".9"/>
+    <rect x="52" y="238" width="220" height="30" rx="10" fill="#05416f"/>
+    <rect x="228" y="150" width="34" height="112" rx="8" fill="#083f6d"/>
+    <circle cx="72" cy="222" r="12" fill="#ffd21c"/>
+    <rect x="200" y="262" width="560" height="24" rx="10" fill="#3c556d"/>
+
+    <g fill="#081f36">
+      <circle cx="120" cy="300" r="46"/><circle cx="300" cy="300" r="46"/><circle cx="404" cy="300" r="46"/><circle cx="700" cy="300" r="46"/>
+    </g>
+    <g fill="#7c92a7">
+      <circle cx="120" cy="300" r="20"/><circle cx="300" cy="300" r="20"/><circle cx="404" cy="300" r="20"/><circle cx="700" cy="300" r="20"/>
+    </g>
+    <g fill="#ffd21c" opacity=".9">
+      <rect x="248" y="238" width="26" height="26" rx="6"/>
+    </g>
+    <rect x="440" y="238" width="120" height="26" rx="6" fill="#ffffff" opacity=".9"/>
+    <text x="500" y="257" fill="#c8102e" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" text-anchor="middle">FLAMMABLE</text>
+  </g>
+
+  <g transform="translate(858 566)">
+    <ellipse cx="150" cy="252" rx="200" ry="22" fill="#04182c" opacity=".4"/>
+    <g transform="translate(0 92)">
+      <g transform="translate(0 0)"><rect width="60" height="120" rx="19" fill="url(#bd-cyl)"/><rect y="82" width="60" height="17" fill="#ffd21c"/><rect x="18" y="-16" width="24" height="18" rx="5" fill="#8299ad"/></g>
+      <g transform="translate(74 0)"><rect width="60" height="120" rx="19" fill="url(#bd-cyl)"/><rect y="82" width="60" height="17" fill="#ffd21c"/><rect x="18" y="-16" width="24" height="18" rx="5" fill="#8299ad"/></g>
+      <g transform="translate(148 0)"><rect width="60" height="120" rx="19" fill="url(#bd-cyl)"/><rect y="82" width="60" height="17" fill="#ffd21c"/><rect x="18" y="-16" width="24" height="18" rx="5" fill="#8299ad"/></g>
+      <g transform="translate(222 0)"><rect width="60" height="120" rx="19" fill="url(#bd-cyl)"/><rect y="82" width="60" height="17" fill="#ffd21c"/><rect x="18" y="-16" width="24" height="18" rx="5" fill="#8299ad"/></g>
+    </g>
+    <rect x="-16" y="212" width="316" height="18" rx="9" fill="#41586e"/>
+    <rect x="-16" y="230" width="316" height="26" rx="8" fill="#2b3f52"/>
+  </g>
+</svg>
