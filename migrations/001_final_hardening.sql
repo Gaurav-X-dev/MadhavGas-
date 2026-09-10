@@ -47,30 +47,6 @@ DO $$ BEGIN
   END IF;
 END $$;
 
-UPDATE cms_singletons
-SET data = (data - 'logoUrl') || jsonb_build_object(
-  'bharatgasLogoUrl', COALESCE(NULLIF(data->>'bharatgasLogoUrl', ''), '/assets/brands/bharatgas-logo.svg'),
-  'bharatgasLogoAlt', COALESCE(NULLIF(data->>'bharatgasLogoAlt', ''), 'Bharatgas logo'),
-  'mbgaLogoUrl', COALESCE(NULLIF(data->>'mbgaLogoUrl', ''), NULLIF(data->>'logoUrl', ''), '/assets/brands/mbga-logo.svg'),
-  'mbgaLogoAlt', COALESCE(NULLIF(data->>'mbgaLogoAlt', ''), 'Madhav Bharat Gas Agency logo')
-), updated_at = NOW()
-WHERE key = 'site-content';
-
-UPDATE cms_documents
-SET data = data || jsonb_build_object(
-  'category', COALESCE(NULLIF(data->>'category', ''),
-    CASE data->>'brand' WHEN 'Bharatgas' THEN 'Brand Network' WHEN 'MBGA' THEN 'Agency Service' ELSE 'Customer Success' END),
-  'imageUrl', COALESCE(data->>'imageUrl', ''),
-  'imageAlt', COALESCE(data->>'imageAlt', ''),
-  'published', COALESCE((data->>'published')::boolean, TRUE),
-  'featured', COALESCE((data->>'featured')::boolean, FALSE)
-), updated_at = NOW()
-WHERE resource = 'journey';
-
-UPDATE cms_documents
-SET data = data || jsonb_build_object('email', COALESCE(data->>'email', '')), updated_at = NOW()
-WHERE resource = 'bookings';
-
 INSERT INTO newsletter_subscribers (
   email, active, unsubscribe_token_hash, subscribed_at, created_at, updated_at
 )
