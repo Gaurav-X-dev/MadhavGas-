@@ -7,15 +7,28 @@ export const dynamic = 'force-dynamic';
 export default async function PublicLayout({ children }: { children: React.ReactNode }) {
   const data = await getPublicSiteData();
   const agency = data.agencySettings;
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://madhavbharatgasagency.com').replace(/\/$/, '');
+  const logoUrl = data.siteContent.mbgaLogoUrl || data.siteContent.bharatgasLogoUrl;
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'GasStation'],
+    '@id': `${siteUrl}/#business`,
     name: agency.agencyName,
     description: data.siteContent.agencyIntro,
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    url: siteUrl,
     telephone: agency.phonePrimary,
     email: agency.email,
-    address: agency.officeAddress,
+    image: logoUrl ? `${siteUrl}${logoUrl.startsWith('/') ? logoUrl : `/${logoUrl}`}` : undefined,
+    logo: logoUrl ? `${siteUrl}${logoUrl.startsWith('/') ? logoUrl : `/${logoUrl}`}` : undefined,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: agency.officeAddress,
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      postalCode: '122018',
+      addressCountry: 'IN',
+    },
+    areaServed: ['Gurugram', 'Haryana'],
     brand: { '@type': 'Brand', name: 'Bharatgas' },
     sameAs: [agency.facebook, agency.instagram, agency.linkedin, agency.twitter].filter(Boolean),
   };
