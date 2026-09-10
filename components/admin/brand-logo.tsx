@@ -11,6 +11,8 @@ interface MbgaLogoProps {
 interface Branding {
   logoUrl: string;
   logoAlt: string;
+  bharatgasLogoUrl: string;
+  bharatgasLogoAlt: string;
   agencyName: string;
   tagline: string;
 }
@@ -18,6 +20,8 @@ interface Branding {
 const fallback: Branding = {
   logoUrl: '/assets/brands/mbga-logo.svg',
   logoAlt: 'Madhav Bharat Gas Agency logo',
+  bharatgasLogoUrl: '/assets/brands/bharatgas-logo.svg',
+  bharatgasLogoAlt: 'Bharatgas logo',
   agencyName: 'Madhav Bharat Gas',
   tagline: 'Authorized Bharatgas Distributor',
 };
@@ -41,6 +45,8 @@ export function MbgaLogo({ className, variant = 'dark' }: MbgaLogoProps) {
         setBranding({
           logoUrl: payload.siteContent?.mbgaLogoUrl || fallback.logoUrl,
           logoAlt: payload.siteContent?.mbgaLogoAlt || fallback.logoAlt,
+          bharatgasLogoUrl: payload.siteContent?.bharatgasLogoUrl || fallback.bharatgasLogoUrl,
+          bharatgasLogoAlt: payload.siteContent?.bharatgasLogoAlt || fallback.bharatgasLogoAlt,
           agencyName: payload.agencySettings?.agencyName || fallback.agencyName,
           tagline: payload.agencySettings?.tagline || fallback.tagline,
         });
@@ -58,12 +64,11 @@ export function MbgaLogo({ className, variant = 'dark' }: MbgaLogoProps) {
           {branding.agencyName.trim().charAt(0).toUpperCase() || 'M'}
         </span>
       ) : (
-        <img
-          src={branding.logoUrl}
-          alt={branding.logoAlt}
-          onError={() => setImageFailed(true)}
-          className="h-9 w-auto max-w-full object-contain object-left"
-        />
+        <span className="flex max-w-full items-center gap-3">
+          <img src={branding.logoUrl} alt={branding.logoAlt} onError={() => setImageFailed(true)} className="h-9 w-auto max-w-[112px] object-contain object-left" />
+          <span className={cn('h-8 w-px', isLight ? 'bg-white/20' : 'bg-border')} aria-hidden="true" />
+          <img src={branding.bharatgasLogoUrl} alt={branding.bharatgasLogoAlt} className="h-9 w-auto max-w-[86px] object-contain object-left" />
+        </span>
       )}
       <span className="flex min-w-0 max-w-full flex-col leading-tight">
         <span className={cn('text-sm font-bold leading-snug', isLight ? 'text-white' : 'text-brand-navy')}>

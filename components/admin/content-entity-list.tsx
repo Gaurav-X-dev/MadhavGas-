@@ -13,7 +13,7 @@ import { DataTable, type Column } from '@/components/admin/data-table';
 import { EmptyState } from '@/components/admin/empty-state';
 import { PageHeader } from '@/components/admin/page-header';
 import { StatusBadge } from '@/components/admin/status-badge';
-import { usePersistentCollection } from '@/hooks/use-persistent-data';
+import { useCurrentUser, usePersistentCollection } from '@/hooks/use-persistent-data';
 import { achievements, galleryItems, journeyMilestones, products } from '@/lib/mock-data';
 import type { Achievement, GalleryItem, JourneyMilestone, Product } from '@/lib/types';
 
@@ -67,6 +67,8 @@ export function ContentEntityList({ kind }: { kind: ContentEntityKind }) {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all');
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const currentUser = useCurrentUser();
+  const canEdit = currentUser.role === 'Super Admin' || currentUser.role === 'Editor';
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -89,7 +91,7 @@ export function ContentEntityList({ kind }: { kind: ContentEntityKind }) {
     { key: 'type', header: kind === 'journey' ? 'Journey Type' : 'Type', render: (item) => <span className="text-sm text-foreground">{typeFor(kind, item)}</span> },
     { key: 'status', header: 'Status', render: (item) => <StatusBadge status={statusFor(kind, item)} /> },
     { key: 'order', header: 'Order', render: (item) => <span className="text-sm text-muted-foreground">{orderFor(item) === null ? '—' : `#${orderFor(item)}`}</span> },
-    {
+    ...(canEdit ? [{
       key: 'actions', header: 'Actions', className: 'w-20 text-right', render: (item) => (
         <DropdownMenu>
           <DropdownMenuTrigger asChild><Button variant="ghost" size="icon" className="h-8 w-8" aria-label={`Actions for ${titleFor(kind, item)}`}><MoreHorizontal className="h-4 w-4" /></Button></DropdownMenuTrigger>
@@ -101,7 +103,7 @@ export function ContentEntityList({ kind }: { kind: ContentEntityKind }) {
           </DropdownMenuContent>
         </DropdownMenu>
       ),
-    },
+    } as Column<ContentEntity>] : []),
   ];
 
   const filterOptions = kind === 'journey'
@@ -119,8 +121,8 @@ export function ContentEntityList({ kind }: { kind: ContentEntityKind }) {
   return (
     <div className="animate-fade-in-up">
       <PageHeader title={config.title} description={config.description}>
-        <Button variant="outline" asChild><Link href={`/admin/${kind}/settings`}><Settings2 className="mr-2 h-4 w-4" />Page Content</Link></Button>
-        <Button asChild><Link href={`/admin/${kind}/new`}><Plus className="mr-2 h-4 w-4" />Add {config.singular}</Link></Button>
+        {canEdit && <Button variant="outline" asChild><Link href={`/admin/${kind}/settings`}><Settings2 className="mr-2 h-4 w-4" />Page Content</Link></Button>}
+        {canEdit && <Button asChild><Link href={`/admin/${kind}/new`}><Plus className="mr-2 h-4 w-4" />Add {config.singular}</Link></Button>}
       </PageHeader>
 
       <Card className="mb-5 shadow-sm">

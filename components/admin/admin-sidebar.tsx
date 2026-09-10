@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronLeft } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { navGroups } from './nav-config';
 import { MbgaLogo } from './brand-logo';
@@ -13,6 +13,13 @@ interface AdminSidebarProps {
 
 export function AdminSidebar({ onNavigate }: AdminSidebarProps) {
   const pathname = usePathname();
+  const router = useRouter();
+  const logout = async () => {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    router.replace('/admin/login');
+    router.refresh();
+    onNavigate?.();
+  };
 
   return (
     <div className="flex h-full flex-col bg-brand-navy text-white">
@@ -57,13 +64,14 @@ export function AdminSidebar({ onNavigate }: AdminSidebarProps) {
       </nav>
 
       <div className="border-t border-white/10 p-4">
-        <Link
-          href="/"
+        <button
+          type="button"
+          onClick={logout}
           className="flex items-center gap-2 text-xs text-white/50 hover:text-white transition-colors"
         >
-          <ChevronLeft className="h-3.5 w-3.5" />
-          Back to public site
-        </Link>
+          <LogOut className="h-3.5 w-3.5" />
+          Log out
+        </button>
       </div>
     </div>
   );

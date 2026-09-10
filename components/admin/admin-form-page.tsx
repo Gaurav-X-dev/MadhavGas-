@@ -32,7 +32,7 @@ export function AdminFormPage({
   submitLabel = 'Save Changes',
 }: AdminFormPageProps) {
   return (
-    <form onSubmit={onSubmit} className="animate-fade-in-up pb-24" noValidate>
+    <form onSubmit={onSubmit} className="animate-fade-in-up" noValidate>
       <nav className="mb-4 flex items-center gap-1.5 text-xs font-medium text-muted-foreground" aria-label="Breadcrumb">
         <Link href={sectionHref} className="transition-colors hover:text-brand-blue">{section}</Link>
         <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />

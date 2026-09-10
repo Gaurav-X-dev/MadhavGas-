@@ -250,7 +250,8 @@ function renderJourney(data: PublicSiteData) {
       + `<b>${escapeHtml(item.brand === 'Bharatgas' ? 'Bharatgas' : 'Madhav Bharat Gas')}</b>`
       + `<i data-icon="${safeIcon(item.icon, 'flame')}"></i>`
       + `<small>${escapeHtml(item.year || item.category)}</small>`
-      + `<h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></article>`).join('')}</div>`
+      + `<h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p>`
+      + `<a class="journey-read-more" href="/journey">Read more <span>&rarr;</span></a></article>`).join('')}</div>`
     : emptyState('Journey updates will appear here when published.');
   return `<section class="timeline-preview section home-journey-section"><div class="container">`
     + sectionHead(settings.eyebrow, settings.title, '', action) + body + `</div></section>`;

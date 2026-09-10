@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Save, Download, AlertTriangle, Bell, Mail, Globe, FileText, CheckCircle2, LoaderCircle, Send, XCircle } from 'lucide-react';
+import { Save, Download, AlertTriangle, Bell, Mail, Globe, FileText, CheckCircle2, LoaderCircle, Send, XCircle, LockKeyhole } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -22,6 +22,23 @@ export default function SettingsPage() {
   const [emailStatus, setEmailStatus] = useState<EmailServiceStatus | null>(null);
   const [testRecipient, setTestRecipient] = useState('');
   const [sendingTest, setSendingTest] = useState(false);
+  const [passwords, setPasswords] = useState({ current: '', next: '', confirm: '' });
+  const [changingPassword, setChangingPassword] = useState(false);
+
+  const handlePasswordChange = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (passwords.next.length < 8) return toast.error('New password must be at least 8 characters');
+    if (passwords.next !== passwords.confirm) return toast.error('New password confirmation does not match');
+    setChangingPassword(true);
+    try {
+      const response = await fetch('/api/auth/change-password', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ currentPassword: passwords.current, newPassword: passwords.next }) });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'Unable to update password');
+      setPasswords({ current: '', next: '', confirm: '' });
+      toast.success('Password updated successfully');
+    } catch (error) { toast.error(error instanceof Error ? error.message : 'Unable to update password'); }
+    finally { setChangingPassword(false); }
+  };
 
   useEffect(() => {
     const controller = new AbortController();
@@ -97,6 +114,7 @@ export default function SettingsPage() {
           <TabsTrigger value="social">Social</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
           <TabsTrigger value="email">Email Templates</TabsTrigger>
+          <TabsTrigger value="password">Change Password</TabsTrigger>
           <TabsTrigger value="danger">Danger Zone</TabsTrigger>
         </TabsList>
 
@@ -269,6 +287,18 @@ export default function SettingsPage() {
             </CardContent>
           </Card>
           </div>
+        </TabsContent>
+
+        <TabsContent value="password">
+          <Card className="max-w-2xl">
+            <CardHeader><CardTitle className="flex items-center gap-2 text-base"><LockKeyhole className="h-4 w-4 text-brand-blue" />Update Password</CardTitle><CardDescription>Change the password for your currently signed-in administrator account.</CardDescription></CardHeader>
+            <CardContent><form className="space-y-4" onSubmit={handlePasswordChange}>
+              <div className="space-y-1.5"><Label htmlFor="current-password">Current password</Label><Input id="current-password" type="password" autoComplete="current-password" value={passwords.current} onChange={(event) => setPasswords((value) => ({ ...value, current: event.target.value }))} required /></div>
+              <div className="space-y-1.5"><Label htmlFor="new-password">New password</Label><Input id="new-password" type="password" autoComplete="new-password" minLength={8} value={passwords.next} onChange={(event) => setPasswords((value) => ({ ...value, next: event.target.value }))} required /></div>
+              <div className="space-y-1.5"><Label htmlFor="confirm-password">Confirm new password</Label><Input id="confirm-password" type="password" autoComplete="new-password" minLength={8} value={passwords.confirm} onChange={(event) => setPasswords((value) => ({ ...value, confirm: event.target.value }))} required /></div>
+              <Button type="submit" disabled={changingPassword}>{changingPassword && <LoaderCircle className="mr-2 h-4 w-4 animate-spin" />}Update Password</Button>
+            </form></CardContent>
+          </Card>
         </TabsContent>
 
         <TabsContent value="danger">

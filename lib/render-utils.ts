@@ -25,16 +25,16 @@ export function agencyTime(value: string) {
 /** The icon names the public runtime script can actually draw. */
 const iconNames = new Set([
   'flame', 'headphones', 'shield-check', 'mail', 'map-pin', 'clock', 'phone',
-  'whatsapp', 'message-circle',
+  'whatsapp', 'message-circle', 'building2', 'trending-up', 'route',
 ]);
 
 const iconAliases: Record<string, string> = {
-  building2: 'map-pin',
+  building2: 'building2',
   factory: 'shield-check',
-  trendingup: 'headphones',
+  trendingup: 'trending-up',
   monitorsmartphone: 'mail',
   smartphone: 'mail',
-  route: 'map-pin',
+  route: 'route',
   recycle: 'shield-check',
   gauge: 'clock',
   award: 'shield-check',

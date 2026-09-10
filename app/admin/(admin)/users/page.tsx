@@ -21,7 +21,7 @@ import { PageHeader } from '@/components/admin/page-header';
 import { DataTable, type Column } from '@/components/admin/data-table';
 import { StatusBadge } from '@/components/admin/status-badge';
 import { permissionsMatrix } from '@/lib/mock-data';
-import { usePersistentCollection } from '@/hooks/use-persistent-data';
+import { useCurrentUser, usePersistentCollection } from '@/hooks/use-persistent-data';
 import type { User, UserRole } from '@/lib/types';
 import { toast } from 'sonner';
 
@@ -40,6 +40,8 @@ export default function UsersPage() {
     active: true,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const currentUser = useCurrentUser();
+  const canManageUsers = currentUser.role === 'Super Admin';
 
   const filtered = items.filter((u) =>
     u.name.toLowerCase().includes(search.toLowerCase()) || u.email.toLowerCase().includes(search.toLowerCase())
@@ -113,7 +115,7 @@ export default function UsersPage() {
       render: (u) => <StatusBadge status={u.active ? 'Active' : 'Inactive'} />,
     },
     { key: 'lastActive', header: 'Last Active', render: (u) => <span className="text-xs text-muted-foreground">{u.lastActive}</span> },
-    {
+    ...(canManageUsers ? [{
       key: 'actions',
       header: '',
       render: (u) => (
@@ -124,16 +126,16 @@ export default function UsersPage() {
           <Switch checked={u.active} onCheckedChange={() => toggleActive(u.id)} onClick={(e) => e.stopPropagation()} />
         </div>
       ),
-    },
+    } as Column<User>] : []),
   ];
 
   return (
     <div className="animate-fade-in-up">
       <PageHeader title="Users & Roles" description="Manage real administrator accounts and access roles.">
-        <Button onClick={openAdd}>
+        {canManageUsers && <Button onClick={openAdd}>
           <Plus className="mr-2 h-4 w-4" />
           Add user
-        </Button>
+        </Button>}
       </PageHeader>
 
       <Card className="mb-4">
@@ -149,7 +151,7 @@ export default function UsersPage() {
         columns={columns}
         data={filtered}
         rowKey={(u) => u.id}
-        onRowClick={(u) => openEdit(u)}
+        onRowClick={canManageUsers ? (u) => openEdit(u) : undefined}
         emptyTitle="No users found"
       />
 

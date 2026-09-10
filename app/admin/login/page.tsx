@@ -157,7 +157,7 @@ export default function LoginPage() {
                   Remember me
                 </Label>
               </div>
-              <span className="text-xs text-muted-foreground">Contact the Super Admin to reset access.</span>
+              <a href="mailto:admin@mbga.in?subject=Admin%20password%20reset" className="text-xs font-semibold text-brand-blue hover:underline">Forgot password?</a>
             </div>
 
             <Button type="submit" className="w-full" size="lg" disabled={submitting}>

@@ -1360,9 +1360,25 @@ body {
     background: #ffffff;
 }
 
-.home-journey-section .preview-step:nth-child(2) {
+.home-journey-section .preview-step:nth-child(even) {
     background: #f2f7fb;
 }
+
+.home-journey-section .preview-step:hover { color: #fff; background: var(--locator-navy); }
+.home-journey-section .preview-step:hover h3,
+.home-journey-section .preview-step:hover p,
+.home-journey-section .preview-step:hover small,
+.home-journey-section .preview-step:hover i,
+.home-journey-section .preview-step:hover > span,
+.home-journey-section .preview-step:hover > b,
+.home-journey-section .preview-step:hover .journey-read-more { color: #fff; }
+.journey-read-more { display: inline-flex; gap: 7px; align-items: center; margin-top: 20px; color: var(--locator-navy); font-size: .75rem; font-weight: 800; }
+@media (min-width: 768px) { .home-journey-section .preview-step { min-height: 520px; } }
+@media (max-width: 767px) { .home-journey-section .preview-step { min-height: auto; } }
+.award-card-featured:hover { color: var(--locator-navy); background: #fff; }
+.award-card-featured:hover h3 { color: var(--locator-navy); }
+.award-card-featured:hover p { color: var(--locator-muted); }
+.award-card-featured:hover small { color: var(--locator-accent-dark); }
 
 .home-journey-section .preview-step > b {
     display: block;

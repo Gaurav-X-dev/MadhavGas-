@@ -93,7 +93,7 @@ export function usePersistentSingleton<T extends object>(
 }
 
 export function useCurrentUser() {
-  const [user, setUser] = useState({ name: 'MBGA Administrator', email: '', role: 'Super Admin', avatar: 'MA' });
+  const [user, setUser] = useState({ name: 'MBGA Administrator', email: '', role: 'Viewer', avatar: 'MA' });
   useEffect(() => {
     fetch('/api/auth/me', { cache: 'no-store' })
       .then((response) => response.json())
