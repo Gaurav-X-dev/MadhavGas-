@@ -1,20 +1,20 @@
 import { getCollection, getSingleton } from './resources';
 import type {
-  Achievement, AgencySettings, GalleryItem, HomeContent, JourneyMilestone, Product,
-  LocalDiscoveryContent, PageHeroesContent, QrSettings, SiteChromeContent, SiteContent, SiteSectionsContent, SustainabilityContent, ContactSettings,
+  Achievement,
+  AgencySettings,
+  ContactSettings,
+  GalleryItem,
+  HomeContent,
+  JourneyMilestone,
+  LocalDiscoveryContent,
+  PageHeroesContent,
+  Product,
+  QrSettings,
+  SiteChromeContent,
+  SiteContent,
+  SiteSectionsContent,
+  SustainabilityContent,
 } from './types';
-import { homeContent as fallbackHome } from './home-defaults';
-import { pageHeroes as fallbackHeroes } from './page-hero-defaults';
-import { siteSections as fallbackSections } from './site-section-defaults';
-import { siteChrome as fallbackChrome } from './site-chrome-defaults';
-import {
-  agencySettings as fallbackAgency,
-  localDiscoveryContent as fallbackDiscovery,
-  qrSettings as fallbackQr,
-  siteContent as fallbackSite,
-  sustainabilityContent as fallbackSustainability,
-  fallbackContactSettings,
-} from './mock-data';
 
 export interface PublicSiteData {
   products: Product[];
@@ -50,80 +50,152 @@ export async function getPublicSiteData(): Promise<PublicSiteData> {
     getSingleton<AgencySettings>('agency-settings'),
     getSingleton<ContactSettings>('contact-settings'),
   ]);
+
   return {
     products,
     journey,
     achievements,
     gallery,
-    siteContent: siteContent ?? fallbackSite,
-    homeContent: mergeHomeContent(homeContent),
-    pageHeroes: mergePageHeroes(pageHeroes),
-    siteSections: mergeSiteSections(siteSections),
-    siteChrome: mergeSiteChrome(siteChrome),
-    sustainability: sustainability ?? fallbackSustainability,
-    localDiscovery: localDiscovery ?? fallbackDiscovery,
-    qrSettings: qrSettings ?? fallbackQr,
-    agencySettings: agencySettings ?? fallbackAgency,
-    contactSettings: contactSettings ? { ...fallbackContactSettings, ...contactSettings } : fallbackContactSettings,
+    siteContent: siteContent ?? emptySiteContent,
+    homeContent: homeContent ?? emptyHomeContent,
+    pageHeroes: pageHeroes ?? emptyPageHeroes,
+    siteSections: siteSections ?? emptySiteSections,
+    siteChrome: siteChrome ?? emptySiteChrome,
+    sustainability: sustainability ?? emptySustainability,
+    localDiscovery: localDiscovery ?? emptyLocalDiscovery,
+    qrSettings: qrSettings ?? emptyQrSettings,
+    agencySettings: agencySettings ?? emptyAgencySettings,
+    contactSettings: contactSettings ?? emptyContactSettings,
   };
 }
 
-function mergeSiteChrome(stored: SiteChromeContent | null): SiteChromeContent {
-  if (!stored || typeof stored !== 'object') return fallbackChrome;
-  return {
-    ...fallbackChrome,
-    ...stored,
-    newsletter: { ...fallbackChrome.newsletter, ...stored.newsletter },
-    cta: { ...fallbackChrome.cta, ...stored.cta },
-    footer: { ...fallbackChrome.footer, ...stored.footer },
-    discovery: { ...fallbackChrome.discovery, ...stored.discovery },
-    navigation: Array.isArray(stored.navigation) ? stored.navigation : fallbackChrome.navigation,
-  };
-}
+const emptySection = { published: false, displayOrder: 0 };
 
-/**
- * Older saved records predate newer homepage sections, so each section falls
- * back to its seed values field by field rather than failing to render.
- */
-function mergeHomeContent(stored: HomeContent | null): HomeContent {
-  if (!stored || typeof stored !== 'object') return fallbackHome;
-  const merged: Record<string, unknown> = { ...fallbackHome };
-  for (const key of Object.keys(fallbackHome) as Array<keyof HomeContent>) {
-    const section = (stored as unknown as Record<string, unknown>)[key];
-    merged[key] = section && typeof section === 'object'
-      ? { ...(fallbackHome[key] as object), ...(section as object) }
-      : fallbackHome[key];
-  }
-  return merged as unknown as HomeContent;
-}
+const emptySiteContent: SiteContent = {
+  agencyIntro: '',
+  phonePrimary: '',
+  phoneSecondary: '',
+  email: '',
+  officeAddress: '',
+  businessHours: '',
+  whatsappNumber: '',
+  seoTitle: '',
+  seoDescription: '',
+  bharatgasLogoUrl: '',
+  bharatgasLogoAlt: '',
+  mbgaLogoUrl: '',
+  mbgaLogoAlt: '',
+  heroSlides: [],
+};
 
-/** Falls back page by page, so a record saved before a page existed still renders. */
-function mergePageHeroes(stored: PageHeroesContent | null): PageHeroesContent {
-  if (!stored || typeof stored !== 'object') return fallbackHeroes;
-  const merged: Record<string, unknown> = { ...fallbackHeroes };
-  for (const key of Object.keys(fallbackHeroes) as Array<keyof PageHeroesContent>) {
-    const hero = (stored as unknown as Record<string, unknown>)[key];
-    merged[key] = hero && typeof hero === 'object'
-      ? { ...fallbackHeroes[key], ...(hero as object) }
-      : fallbackHeroes[key];
-  }
-  return merged as unknown as PageHeroesContent;
-}
+const emptyHomeContent: HomeContent = {
+  quickLinks: { ...emptySection, items: [] },
+  qr: { ...emptySection, eyebrow: '', title: '', description: '', ctaText: '', badgeText: '', scanTitle: '', scanSubtitle: '', benefits: [] },
+  about: { ...emptySection, eyebrow: '', title: '', lead: '', detail: '', image: '', imageAlt: '', badgeTitle: '', badgeSubtitle: '', checkItems: [], metrics: [], ctaText: '', ctaLink: '' },
+  services: { ...emptySection, eyebrow: '', title: '', lead: '', cards: [] },
+  products: { ...emptySection, eyebrow: '', title: '', lead: '', ctaText: '', limit: 0, noteTitle: '', noteDescription: '', noteCtaText: '' },
+  safety: { ...emptySection, eyebrow: '', title: '', lead: '', image: '', imageAlt: '', badgeText: '', proofTitle: '', proofSubtitle: '', ctaText: '', ctaLink: '', helpTitle: '', helpLinkText: '', panelKicker: '', panelTitle: '', panelSubtitle: '', steps: [], footerTitle: '', footerSubtitle: '', footerLinkText: '', footerLinkHref: '' },
+  trustStrip: { ...emptySection, items: [] },
+  journey: { ...emptySection, eyebrow: '', title: '', ctaText: '', limit: 0 },
+  achievements: { ...emptySection, eyebrow: '', title: '', lead: '', ctaText: '', limit: 0 },
+  partnership: { ...emptySection, eyebrow: '', title: '', lead: '', leftLabel: '', leftTitle: '', leftDescription: '', bridgeTitle: '', bridgeFlow: '', rightLabel: '', rightTitle: '', rightDescription: '' },
+  sustainability: { ...emptySection, eyebrow: '', title: '', description: '', ctaText: '', ctaLink: '', limit: 0 },
+  gallery: { ...emptySection, eyebrow: '', title: '', ctaText: '', limit: 0 },
+  visit: { ...emptySection, eyebrow: '', title: '', lead: '', mapsUrl: '' },
+};
 
-/** Falls back section by section for records saved before a section existed. */
-function mergeSiteSections(stored: SiteSectionsContent | null): SiteSectionsContent {
-  if (!stored || typeof stored !== 'object') return fallbackSections;
-  const merged: Record<string, unknown> = { ...fallbackSections };
-  for (const key of Object.keys(fallbackSections) as Array<keyof SiteSectionsContent>) {
-    const section = (stored as unknown as Record<string, unknown>)[key];
-    merged[key] = section && typeof section === 'object'
-      ? { ...fallbackSections[key], ...(section as object) }
-      : fallbackSections[key];
-  }
-  return merged as unknown as SiteSectionsContent;
-}
+const emptyHero = { eyebrow: '', title: '', description: '', image: '', imageAlt: '' };
+const emptyPageHeroes: PageHeroesContent = {
+  products: emptyHero,
+  journey: emptyHero,
+  achievements: emptyHero,
+  gallery: emptyHero,
+  contact: emptyHero,
+};
+
+const emptySiteSections: SiteSectionsContent = {
+  assist: { published: false, partnerKicker: '', kicker: '', title: '', description: '', options: [], noteTitle: '', noteText: '', noteLinkText: '', noteHref: '' },
+  videoHub: { published: false, eyebrow: '', title: '', lead: '', countLabel: '', featuredEmbedUrl: '', featuredKicker: '', featuredTitle: '', featuredDescription: '', playlistKicker: '', playlistTitle: '', items: [], channelLinkText: '', channelUrl: '' },
+};
+
+const emptySiteChrome: SiteChromeContent = {
+  loaderKicker: '',
+  loaderTagline: '',
+  hoursLabel: '',
+  callButtonText: '',
+  navigation: [],
+  newsletter: { published: false, eyebrow: '', title: '', description: '', placeholder: '', submitText: '', noteText: '', invalidEmailText: '', pendingText: '', successText: '', errorText: '' },
+  cta: { published: false, title: '', description: '', callText: '', contactText: '', whatsappText: '', whatsappMessage: '' },
+  footer: { supportKicker: '', supportTitle: '', whatsappText: '', aboutText: '', badges: [], qrKicker: '', qrTitle: '', qrLinkText: '', exploreTitle: '', businessTitle: '', contactTitle: '', phoneHint: '', emailHint: '', availabilityEyebrow: '', hoursTitle: '', weekdaysLabel: '', closedLabel: '', contactButtonText: '', copyrightText: '', closingText: '' },
+  discovery: { eyebrow: '', localitiesLabel: '', categoriesLabel: '', topicsLabel: '', emptyText: '' },
+};
+
+const emptySustainability: SustainabilityContent = {
+  heroTitle: '',
+  heroDescription: '',
+  heroImage: '',
+  heroImageAlt: '',
+  storyTitle: '',
+  storyDescription: '',
+  storyImage: '',
+  storyImageAlt: '',
+  storyPoints: [],
+  cards: [],
+  routePlanning: '',
+  reusableCycle: '',
+  digitalAssistance: '',
+  supplyChainSteps: [],
+};
+
+const emptyLocalDiscovery: LocalDiscoveryContent = {
+  heading: '',
+  description: '',
+  localities: [],
+  categories: [],
+  topics: [],
+};
+
+const emptyQrSettings: QrSettings = {
+  whatsappNumber: '',
+  defaultMessage: '',
+  bookingUrl: '',
+};
+
+const emptyAgencySettings: AgencySettings = {
+  agencyName: '',
+  tagline: '',
+  phonePrimary: '',
+  phoneSecondary: '',
+  email: '',
+  officeAddress: '',
+  businessHours: '',
+  whatsappNumber: '',
+  facebook: '',
+  instagram: '',
+  linkedin: '',
+  twitter: '',
+  notifyNewBookings: false,
+  notifyNewEnquiries: false,
+  notifyNewFeedback: false,
+  notifyLowStock: false,
+  emailTemplateBooking: '',
+  emailTemplateEnquiry: '',
+  emailTemplateFeedback: '',
+};
+
+const emptyContactSettings: ContactSettings = {
+  eyebrow: '',
+  title: '',
+  description: '',
+  callButtonText: '',
+  emailButtonText: '',
+  submitButtonText: '',
+  statusText: '',
+  unavailableText: '',
+  formTypes: [],
+};
 
 export function whatsappUrl(qr: QrSettings, agency: AgencySettings) {
   const phone = (qr.whatsappNumber || agency.whatsappNumber).replace(/\D/g, '');
-  return `https://wa.me/${phone}?text=${encodeURIComponent(qr.defaultMessage)}`;
+  return phone ? `https://wa.me/${phone}?text=${encodeURIComponent(qr.defaultMessage)}` : '#';
 }

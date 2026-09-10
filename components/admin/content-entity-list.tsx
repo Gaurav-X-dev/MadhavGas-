@@ -14,17 +14,16 @@ import { EmptyState } from '@/components/admin/empty-state';
 import { PageHeader } from '@/components/admin/page-header';
 import { StatusBadge } from '@/components/admin/status-badge';
 import { useCurrentUser, usePersistentCollection } from '@/hooks/use-persistent-data';
-import { achievements, galleryItems, journeyMilestones, products } from '@/lib/mock-data';
 import type { Achievement, GalleryItem, JourneyMilestone, Product } from '@/lib/types';
 
 export type ContentEntityKind = 'products' | 'gallery' | 'journey' | 'achievements';
 type ContentEntity = Product | GalleryItem | JourneyMilestone | Achievement;
 
 const configs = {
-  products: { title: 'Products', singular: 'Product', description: 'Manage the LPG cylinder catalog shown on the public website.', publicHref: '/products', fallback: products as ContentEntity[] },
-  gallery: { title: 'Gallery', singular: 'Media Item', description: 'Manage published images and video references through focused content pages.', publicHref: '/gallery', fallback: galleryItems as ContentEntity[] },
-  journey: { title: 'Journey', singular: 'Journey Item', description: 'Manage Bharatgas and Madhav Bharat Gas milestones as two distinct journey tracks.', publicHref: '/journey', fallback: journeyMilestones as ContentEntity[] },
-  achievements: { title: 'Achievements', singular: 'Achievement', description: 'Manage factual MBGA and Bharatgas achievements and recognitions.', publicHref: '/achievements', fallback: achievements as ContentEntity[] },
+  products: { title: 'Products', singular: 'Product', description: 'Manage the LPG cylinder catalog shown on the public website.', publicHref: '/products', fallback: [] as ContentEntity[] },
+  gallery: { title: 'Gallery', singular: 'Media Item', description: 'Manage published images and video references through focused content pages.', publicHref: '/gallery', fallback: [] as ContentEntity[] },
+  journey: { title: 'Journey', singular: 'Journey Item', description: 'Manage Bharatgas and Madhav Bharat Gas milestones as two distinct journey tracks.', publicHref: '/journey', fallback: [] as ContentEntity[] },
+  achievements: { title: 'Achievements', singular: 'Achievement', description: 'Manage factual MBGA and Bharatgas achievements and recognitions.', publicHref: '/achievements', fallback: [] as ContentEntity[] },
 } as const;
 
 function titleFor(kind: ContentEntityKind, item: ContentEntity) {
