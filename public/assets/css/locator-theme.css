@@ -4114,3 +4114,194 @@ body.menu-open {
         font-size: .72rem;
     }
 }
+
+/* Final mobile lockup and action bar refinement */
+@media (max-width: 767px) {
+    .site-header .nav-wrap {
+        min-height: 88px;
+        align-items: center;
+    }
+
+    .site-header .brand {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        max-width: calc(100vw - 92px);
+        min-width: 0;
+    }
+
+    .site-header .dual-brand-marks.has-brand-image {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        height: 64px;
+        padding-right: 10px;
+        border-right: 1px solid #d8e3ee;
+    }
+
+    .site-header .mbga-mark.has-brand-image {
+        min-width: 58px;
+        width: 58px;
+        height: 58px;
+    }
+
+    .site-header .bharatgas-mark.has-brand-image {
+        min-width: 92px;
+        width: 92px;
+        height: 44px;
+    }
+
+    .site-header .mbga-mark.has-brand-image img,
+    .site-header .bharatgas-mark.has-brand-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .site-header .brand-text {
+        display: block;
+        min-width: 0;
+    }
+
+    .site-header .brand-text strong {
+        display: -webkit-box;
+        max-width: 100%;
+        overflow: hidden;
+        color: #09345f;
+        font-size: .8rem;
+        line-height: 1.12;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .site-header .brand-text small {
+        display: -webkit-box;
+        max-width: 100%;
+        margin-top: 3px;
+        overflow: hidden;
+        color: #61758a;
+        font-size: .48rem;
+        line-height: 1.2;
+        letter-spacing: .05em;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .site-header .menu-toggle {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+    }
+
+    .mobile-bar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        right: 16px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        left: 16px;
+        padding: 7px;
+        background: rgba(255, 255, 255, .96);
+        border: 1px solid rgba(8, 47, 87, .12);
+        border-radius: 18px;
+        box-shadow: 0 14px 34px rgba(8, 47, 87, .24);
+    }
+
+    .mobile-bar a {
+        min-height: 58px;
+        padding: 7px 4px 6px;
+        color: #08345f;
+        background: #ffffff;
+        border: 1px solid #dce8f2;
+        border-radius: 14px;
+        font-size: .76rem;
+        font-weight: 900;
+        box-shadow: 0 5px 14px rgba(8, 47, 87, .08);
+    }
+
+    .mobile-bar a span {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 2px;
+        border-radius: 50%;
+        background: #eef6ff;
+        color: #0a4f8f;
+    }
+
+    .mobile-bar a:nth-child(2) {
+        color: #07613e;
+        background: #f3fff8;
+        border-color: #cdeedb;
+    }
+
+    .mobile-bar a:nth-child(2) span {
+        color: #087a4d;
+        background: #e4f8ec;
+    }
+
+    .mobile-bar a:nth-child(3) {
+        color: #0a4f8f;
+        background: #f5fbff;
+        border-color: #d4e9f8;
+    }
+
+    .premium-footer {
+        padding-bottom: calc(108px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 430px) {
+    .site-header .nav-wrap {
+        min-height: 86px;
+    }
+
+    .site-header .brand {
+        max-width: calc(100vw - 88px);
+        gap: 8px;
+    }
+
+    .site-header .dual-brand-marks.has-brand-image {
+        gap: 7px;
+        height: 60px;
+        padding-right: 8px;
+    }
+
+    .site-header .mbga-mark.has-brand-image {
+        min-width: 54px;
+        width: 54px;
+        height: 54px;
+    }
+
+    .site-header .bharatgas-mark.has-brand-image {
+        min-width: 82px;
+        width: 82px;
+        height: 40px;
+    }
+
+    .site-header .brand-text strong {
+        font-size: .72rem;
+    }
+
+    .site-header .brand-text small {
+        font-size: .43rem;
+        letter-spacing: .035em;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header .brand {
+        grid-template-columns: auto;
+    }
+
+    .site-header .brand-text {
+        display: none;
+    }
+
+    .site-header .dual-brand-marks.has-brand-image {
+        padding-right: 0;
+        border-right: 0;
+    }
+}
