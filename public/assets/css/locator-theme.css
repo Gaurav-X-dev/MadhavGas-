@@ -4298,3 +4298,105 @@ body.menu-open {
         border-right: 0;
     }
 }
+
+/* Final client requested mobile header/action layout */
+@media (max-width: 767px) {
+    .mobile-bar {
+        display: none !important;
+    }
+
+    .site-header .brand {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        max-width: calc(100vw - 92px);
+    }
+
+    .site-header .dual-brand-marks.has-brand-image {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        height: 58px;
+        padding-right: 0 !important;
+        border-right: 0 !important;
+    }
+
+    .site-header .brand-text {
+        display: block !important;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .site-header .brand-text strong {
+        display: -webkit-box;
+        max-width: 185px;
+        overflow: hidden;
+        color: #09345f;
+        font-size: .8rem;
+        line-height: 1.08;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .site-header .brand-text small {
+        display: none !important;
+    }
+
+    .float-actions {
+        right: max(18px, env(safe-area-inset-right));
+        bottom: calc(88px + env(safe-area-inset-bottom));
+        display: grid;
+        gap: 10px;
+    }
+
+    .float-actions .float-call {
+        display: none;
+    }
+
+    .float-actions .float-wa {
+        display: grid;
+        width: 58px;
+        height: 58px;
+        color: #fff;
+        background: #0aa15f;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 14px 30px rgba(0, 88, 47, .28);
+        place-items: center;
+    }
+
+    .float-actions .float-wa svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .float-actions .action-tooltip {
+        display: none;
+    }
+
+    .back-top {
+        right: max(18px, env(safe-area-inset-right));
+        bottom: calc(18px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 430px) {
+    .site-header .brand {
+        max-width: calc(100vw - 88px);
+    }
+
+    .site-header .brand-text strong {
+        max-width: 170px;
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header .brand-text strong {
+        max-width: 146px;
+        font-size: .68rem;
+        -webkit-line-clamp: 1;
+    }
+}
