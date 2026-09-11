@@ -4321,6 +4321,13 @@ body.menu-open {
         height: 58px;
         padding-right: 0 !important;
         border-right: 0 !important;
+        border: 0 !important;
+    }
+
+    .site-header .dual-brand-marks.has-brand-image::after,
+    .site-header .dual-brand-marks.has-brand-image::before {
+        display: none !important;
+        content: none !important;
     }
 
     .site-header .brand-text {
@@ -4356,20 +4363,35 @@ body.menu-open {
     }
 
     .float-actions .float-wa {
-        display: grid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 58px;
         height: 58px;
+        padding: 0;
         color: #fff;
         background: #0aa15f;
         border: 4px solid #fff;
         border-radius: 50%;
         box-shadow: 0 14px 30px rgba(0, 88, 47, .28);
-        place-items: center;
+        line-height: 1;
+    }
+
+    .float-actions .float-wa span,
+    .float-actions .float-wa [data-icon="whatsapp"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        line-height: 1;
     }
 
     .float-actions .float-wa svg {
         width: 28px;
         height: 28px;
+        display: block;
     }
 
     .float-actions .action-tooltip {
@@ -4398,5 +4420,46 @@ body.menu-open {
         max-width: 146px;
         font-size: .68rem;
         -webkit-line-clamp: 1;
+    }
+}
+
+/* Mobile header final cleanup: remove logo/name divider and center WhatsApp icon */
+@media (max-width: 767px) {
+    header.site-header .brand .dual-brand-marks,
+    header.site-header .brand .dual-brand-marks.has-brand-image {
+        border: 0 !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+
+    header.site-header .brand .dual-brand-marks::before,
+    header.site-header .brand .dual-brand-marks::after,
+    header.site-header .brand .dual-brand-marks.has-brand-image::before,
+    header.site-header .brand .dual-brand-marks.has-brand-image::after {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        content: none !important;
+        opacity: 0 !important;
+    }
+
+    .float-actions .float-wa,
+    .float-actions .float-wa > span,
+    .float-actions .float-wa [data-icon="whatsapp"] {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .float-actions .float-wa {
+        padding: 0 !important;
+    }
+
+    .float-actions .float-wa svg {
+        display: block !important;
+        margin: 0 !important;
+        transform: none !important;
     }
 }
