@@ -1,6 +1,7 @@
 import { open, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { NextResponse } from 'next/server';
+import { uploadDirectory } from '@/lib/upload-storage';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -37,7 +38,7 @@ export async function GET(request: Request, context: RouteContext) {
   const { filename } = await context.params;
   if (!safeFileName.test(filename)) return notFound();
 
-  const directory = path.resolve(process.cwd(), 'public', 'uploads');
+  const directory = uploadDirectory();
   const target = path.resolve(directory, filename);
   if (!target.startsWith(`${directory}${path.sep}`)) return notFound();
 

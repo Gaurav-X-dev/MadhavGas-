@@ -3,6 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { requireApiSession } from '@/lib/api-auth';
+import { uploadDirectory } from '@/lib/upload-storage';
 
 const maxBytes = 5 * 1024 * 1024;
 const maxRequestBytes = 6 * 1024 * 1024;
@@ -115,7 +116,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'The video is incomplete or is not a valid MP4/WebM file' }, { status: 400 });
     }
     const videoName = `${Date.now()}-${crypto.randomBytes(12).toString('hex')}${videoFormat.extension}`;
-    const videoDirectory = path.resolve(process.cwd(), 'public', 'uploads');
+    const videoDirectory = uploadDirectory();
     const videoTarget = path.resolve(videoDirectory, videoName);
     if (!videoTarget.startsWith(`${videoDirectory}${path.sep}`)) {
       return NextResponse.json({ error: 'Unsafe upload path rejected' }, { status: 400 });
@@ -138,7 +139,7 @@ export async function POST(request: NextRequest) {
   }
 
   const fileName = `${Date.now()}-${crypto.randomBytes(12).toString('hex')}${format.extension}`;
-  const directory = path.resolve(process.cwd(), 'public', 'uploads');
+  const directory = uploadDirectory();
   const target = path.resolve(directory, fileName);
   if (!target.startsWith(`${directory}${path.sep}`)) return NextResponse.json({ error: 'Unsafe upload path rejected' }, { status: 400 });
   await mkdir(directory, { recursive: true });
