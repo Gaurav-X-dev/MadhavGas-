@@ -523,23 +523,6 @@ function footer() {
             >
         </div>
         <button class="back-top" aria-label="Back to top"><span>↑</span></button>
-        <div class="mobile-bar">
-            <a href="tel:${agencyInfo.phoneLink}"
-                ><span data-icon="phone"></span>Call</a
-            ><a
-                target="_blank"
-                rel="noopener"
-                href="https://wa.me/${agencyInfo.whatsapp}?text=Hello%20MBGA%2C%20I%20need%20non-domestic%20LPG%20assistance."
-                ><span data-icon="whatsapp"></span>WhatsApp</a
-            ><a
-                target="_blank"
-                rel="noopener"
-                href="https://maps.google.com/?q=${encodeURIComponent(
-                    agencyInfo.address,
-                )}"
-                ><span data-icon="map-pin"></span>Directions</a
-            >
-        </div>
         <div class="toast" role="status" aria-live="polite"></div>
         <div
             class="modal"
