@@ -3610,3 +3610,279 @@ h3 {
     .catalog-product-visual { min-height: 290px; }
     .catalog-product-image { width: min(100%, 250px); height: 225px; max-height: 225px; }
 }
+
+/* ================================================================
+   Client-demo responsive hardening
+   Keeps every public page usable on narrow phones without changing
+   admin-managed content or database state.
+================================================================ */
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.site-header,
+.topbar,
+.footer,
+.premium-footer,
+.newsletter-section,
+.cta,
+.section,
+.page-hero,
+.hero-slider {
+    max-width: 100vw;
+}
+
+.section,
+.locator-content-section,
+.premium-footer,
+.newsletter-section,
+.cta {
+    overflow-x: clip;
+}
+
+.brand-text,
+.footer-contact-list span,
+.footer-bottom,
+.page-hero h1,
+.hero-slider h1,
+.hero-slider .hero-heading,
+.section-heading h2,
+.card h3,
+.product-card-content h3,
+.journey-card h3,
+.achievement-card h3 {
+    overflow-wrap: anywhere;
+}
+
+.nav a,
+.btn,
+.footer-support-actions a,
+.mobile-bar a,
+.floating-actions a,
+.footer-card-link {
+    min-height: 44px;
+}
+
+.brand img,
+.dual-brand-marks img,
+.footer-brand img,
+.gallery-card img,
+.achievement-card img,
+.product-card img,
+.page-hero img,
+.hero-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.newsletter-field,
+.action-row,
+.footer-support-actions {
+    min-width: 0;
+}
+
+.newsletter-field input,
+.newsletter-field button,
+.action-row .btn,
+.footer-support-actions a {
+    min-width: 0;
+}
+
+@media (max-width: 1100px) {
+    .site-header .nav {
+        height: 100dvh;
+        max-height: 100dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --page-gutter-mobile: 14px;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .site-header .nav-wrap {
+        min-height: 64px;
+        gap: 10px;
+    }
+
+    .site-header .brand {
+        max-width: calc(100vw - 92px);
+    }
+
+    .site-header .brand-text strong {
+        display: block;
+        max-width: 100%;
+        font-size: .92rem;
+        line-height: 1.15;
+    }
+
+    .site-header .brand-text small {
+        display: block;
+        max-width: 100%;
+        font-size: .58rem;
+        line-height: 1.25;
+    }
+
+    .hero-slider,
+    .hero-slide-content {
+        min-height: min(660px, calc(100svh - 64px));
+    }
+
+    .hero-slide-content {
+        justify-content: center;
+        padding-top: 86px;
+        padding-bottom: 92px;
+    }
+
+    .hero-actions,
+    .action-row,
+    .footer-support-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .hero-actions .btn,
+    .action-row .btn,
+    .footer-support-actions a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .page-hero {
+        min-height: 0;
+        padding: 52px 0 58px;
+    }
+
+    .page-hero h1,
+    .page-hero.timeline-hero h1,
+    .page-products .products-page-hero h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+        line-height: 1.02;
+    }
+
+    .page-hero .lead {
+        font-size: .98rem;
+        line-height: 1.65;
+    }
+
+    .locator-intro-grid,
+    .premium-footer-grid,
+    .footer-grid,
+    .newsletter-content,
+    .cta-inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-support-bar,
+    .premium-footer-bottom {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: left;
+    }
+
+    .footer-contact-list a,
+    .footer-mini-qr,
+    .footer-card-link {
+        max-width: 100%;
+    }
+
+    .newsletter-field {
+        display: grid;
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .newsletter-field button {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        left: max(10px, env(safe-area-inset-left));
+        right: max(10px, env(safe-area-inset-right));
+        bottom: max(10px, env(safe-area-inset-bottom));
+        width: auto;
+    }
+
+    .floating-actions {
+        right: max(12px, env(safe-area-inset-right));
+        bottom: calc(78px + env(safe-area-inset-bottom));
+    }
+
+    .modal-content,
+    .lightbox-content {
+        width: calc(100vw - 24px);
+        max-height: calc(100svh - 32px);
+        overflow: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: calc(100% - 24px);
+    }
+
+    .hero-slider h1,
+    .hero-slider .hero-heading {
+        font-size: clamp(2.15rem, 13vw, 3.1rem);
+    }
+
+    .hero-slider .lead,
+    .section-heading p,
+    .newsletter-copy p,
+    .cta-inner p {
+        font-size: .94rem;
+        line-height: 1.65;
+    }
+
+    .locator-agency-card,
+    .locator-enquiry,
+    .discovery-group,
+    .journey-track-heading,
+    .sustainability-card,
+    .sustainability-chain,
+    .footer-support-bar,
+    .footer-hours-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .gallery-play {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-header .brand-text small,
+    .site-header .bharatgas-mark b {
+        display: none;
+    }
+
+    .site-header .brand {
+        max-width: calc(100vw - 78px);
+    }
+
+    .hero-slider h1,
+    .hero-slider .hero-heading {
+        font-size: clamp(1.9rem, 12.5vw, 2.45rem);
+    }
+
+    .btn,
+    .nav a,
+    .mobile-bar a {
+        font-size: .82rem;
+    }
+}

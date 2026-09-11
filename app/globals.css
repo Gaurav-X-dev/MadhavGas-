@@ -89,3 +89,54 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+@layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  [data-radix-dialog-content],
+  [role="dialog"] {
+    max-width: calc(100vw - 1.5rem);
+  }
+}
+
+@layer utilities {
+  .admin-safe-text {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-radix-dialog-content],
+  [role="dialog"] {
+    max-height: calc(100dvh - 1rem);
+    overflow-y: auto;
+  }
+
+  table {
+    min-width: 720px;
+  }
+
+  .scrollbar-thin {
+    overscroll-behavior: contain;
+  }
+}
