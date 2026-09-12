@@ -4773,3 +4773,38 @@ body.menu-open {
         display: block;
     }
 }
+
+/* Absolute final lock: floating contact buttons and back-to-top must never overlap */
+body .float-actions {
+    position: fixed !important;
+    right: 28px !important;
+    bottom: 118px !important;
+    z-index: 80 !important;
+    display: grid !important;
+    gap: 14px !important;
+}
+
+body .float-actions .float-btn {
+    position: relative !important;
+    z-index: 81 !important;
+}
+
+body .back-top {
+    position: fixed !important;
+    right: 28px !important;
+    bottom: 28px !important;
+    z-index: 70 !important;
+}
+
+@media (max-width: 767px) {
+    body .float-actions {
+        right: 18px !important;
+        bottom: 122px !important;
+        gap: 12px !important;
+    }
+
+    body .back-top {
+        right: 18px !important;
+        bottom: 24px !important;
+    }
+}
