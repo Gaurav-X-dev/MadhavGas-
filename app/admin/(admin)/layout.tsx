@@ -9,8 +9,8 @@ export default async function AdminLayout({
 }) {
   await requireSession();
   return (
-    <div className="flex min-h-screen bg-background">
-      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 lg:block">
+    <div className="min-h-screen bg-background lg:pl-64">
+      <aside className="fixed left-0 top-0 z-40 hidden h-screen w-64 shrink-0 lg:block">
         <AdminSidebar />
       </aside>
       <div className="flex min-w-0 flex-1 flex-col">
