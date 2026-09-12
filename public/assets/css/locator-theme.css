@@ -4518,6 +4518,18 @@ body.menu-open {
     color: var(--locator-navy);
 }
 
+.home-journey-section .preview-step p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.home-journey-section .journey-read-more {
+    margin-top: 18px;
+}
+
 @media (min-width: 768px) {
     .home-journey-section .preview-steps {
         align-items: stretch;
@@ -4526,11 +4538,16 @@ body.menu-open {
     .home-journey-section .preview-step {
         display: flex;
         flex-direction: column;
-        min-height: 520px;
+        min-height: 430px;
     }
 
     .home-journey-section .preview-step p {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
+    }
+
+    .home-journey-section .journey-read-more {
+        margin-top: auto;
+        padding-top: 18px;
     }
 }
 
