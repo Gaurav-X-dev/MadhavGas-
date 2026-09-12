@@ -17,21 +17,8 @@ import type { AgencySettings, EmailServiceStatus } from '@/lib/types';
 import { toast } from 'sonner';
 import { usePersistentSingleton } from '@/hooks/use-persistent-data';
 
-function googleMapsEmbedSource(value: string | undefined) {
-  const configured = (value || '').trim();
-  const source = configured.match(/\bsrc=["']([^"']+)["']/i)?.[1] || configured;
-  if (!source) return '';
-  try {
-    const url = new URL(source);
-    if ((url.protocol === 'https:' || url.protocol === 'http:') && /(^|\.)google\.[a-z.]+$/i.test(url.hostname) && url.pathname.startsWith('/maps')) return url.toString();
-  } catch {
-    return '';
-  }
-  return '';
-}
-
 export default function SettingsPage() {
-  const [settings, setSettings] = usePersistentSingleton<AgencySettings>('agency-settings', initialSettings);
+  const [settings, setSettings, , saveSettings] = usePersistentSingleton<AgencySettings>('agency-settings', initialSettings);
   const [emailStatus, setEmailStatus] = useState<EmailServiceStatus | null>(null);
   const [testRecipient, setTestRecipient] = useState('');
   const [sendingTest, setSendingTest] = useState(false);
@@ -68,24 +55,7 @@ export default function SettingsPage() {
   const update = <K extends keyof AgencySettings>(key: K, value: AgencySettings[K]) =>
     setSettings((s) => ({ ...s, [key]: value }));
 
-  const handleSave = async () => {
-    const normalizedMap = googleMapsEmbedSource(settings.mapEmbedUrl);
-    const nextSettings = { ...settings, mapEmbedUrl: normalizedMap };
-    try {
-      const response = await fetch('/api/admin/settings/agency-settings', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(nextSettings),
-      });
-      if (!response.ok) throw new Error((await response.json()).error || 'Unable to save settings');
-      setSettings(nextSettings);
-      toast.success(normalizedMap ? 'Settings saved and Google Maps embed linked' : 'Settings saved successfully');
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Unable to save settings');
-    }
-  };
-
-  const mapPreviewUrl = googleMapsEmbedSource(settings.mapEmbedUrl);
+  const handleSave = () => saveSettings().then(() => toast.success('Settings saved successfully')).catch((error) => toast.error(error.message));
 
   const handleTestEmail = async () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(testRecipient.trim())) {
@@ -198,18 +168,11 @@ export default function SettingsPage() {
               </div>
               <div className="space-y-1.5">
                 <Label>Google Maps embed URL / iframe</Label>
-                {mapPreviewUrl ? (
-                  <div className="overflow-hidden rounded-xl border bg-muted">
-                    <iframe title="Google Maps embed preview" src={mapPreviewUrl} className="h-56 w-full border-0" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-                  </div>
-                ) : settings.mapEmbedUrl ? (
-                  <p className="text-xs text-destructive">Paste a valid Google Maps embed iframe or URL.</p>
-                ) : null}
                 <Textarea
-                  rows={3}
+                  rows={5}
                   value={settings.mapEmbedUrl || ''}
                   onChange={(e) => update('mapEmbedUrl', e.target.value)}
-                  placeholder="Paste the Google Maps embed URL or full iframe code"
+                  placeholder="Paste the full Google Maps iframe code from Share → Embed a map"
                 />
                 <p className="text-xs text-muted-foreground">Google Maps → Share → Embed a map → copy HTML. The public contact map will use this.</p>
               </div>
