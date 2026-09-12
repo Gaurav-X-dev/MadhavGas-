@@ -67,6 +67,11 @@ function replaceSectionById(html: string, id: string, section: string) {
   return html.replace(pattern, section);
 }
 
+function replaceContactMap(html: string, section: string) {
+  const pattern = /<section class="section-sm">\s*<div class="container">\s*<div class="map">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/i;
+  return html.replace(pattern, section);
+}
+
 function renderProductsSection(data: PublicSiteData, home = false) {
   const products = [...data.products].filter((item) => !item.archived).sort((a, b) => a.displayOrder - b.displayOrder);
   if (home) {
@@ -147,6 +152,14 @@ function renderContactForm(data: PublicSiteData) {
 
   const phoneLink = `+${data.agencySettings.phonePrimary.replace(/\D/g, '')}`;
   return `<section class="section" id="feedback"><div class="container contact-grid"><div><span class="eyebrow">${escapeHtml(contact.eyebrow)}</span><h2>${escapeHtml(contact.title)}</h2><p class="lead">${escapeHtml(contact.description)}</p><div class="contact-mini-actions"><a class="btn btn-primary" href="tel:${escapeHtml(phoneLink)}">${escapeHtml(contact.callButtonText)}</a><a class="btn btn-outline" href="mailto:${escapeHtml(data.agencySettings.email)}">${escapeHtml(contact.emailButtonText)}</a></div></div><form class="form-card" id="contact-form" novalidate><div class="field"><label for="request-type">Request type</label><select id="request-type" name="type" required${!enabledTypes.length ? ' disabled' : ''}>${requestTypeOptions}</select><span class="error"></span></div><div class="field-grid"><div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" maxlength="120" required /><span class="error"></span></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" inputmode="tel" autocomplete="tel" maxlength="20" required /><span class="error"></span></div></div><div class="field"><label for="email">Email <small>(optional)</small></label><input id="email" type="email" name="email" autocomplete="email" maxlength="255" /><span class="error"></span></div><div data-kind-panel="enquiry"${active !== 'enquiry' ? ' hidden' : ''}><div class="field"><label for="subject">Enquiry subject</label><input id="subject" name="subject" maxlength="160"${active === 'enquiry' ? ' required' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="enquiry-message">Enquiry details</label><textarea id="enquiry-message" name="enquiryMessage" rows="5" minlength="10" maxlength="3000"${active === 'enquiry' ? ' required' : ' disabled'}></textarea><span class="error"></span></div></div><div data-kind-panel="booking"${active !== 'booking' ? ' hidden' : ''}><div class="field"><label for="business-name">Business name <small>(optional)</small></label><input id="business-name" name="businessName" maxlength="160"${active === 'booking' ? '' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="cylinder-type">Cylinder / service</label><select id="cylinder-type" name="cylinderType"${active === 'booking' ? ' required' : ' disabled'}><option value="">Select a product</option>${productOptions}</select><span class="error"></span></div><div class="field-grid"><div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" max="1000" step="1"${active === 'booking' ? ' required' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="delivery-area">Delivery area</label><input id="delivery-area" name="deliveryArea" maxlength="160"${active === 'booking' ? ' required' : ' disabled'} /><span class="error"></span></div></div><div class="field"><label for="booking-message">Booking notes <small>(optional)</small></label><textarea id="booking-message" name="bookingMessage" rows="4" maxlength="2000"${active === 'booking' ? '' : ' disabled'}></textarea><span class="error"></span></div></div><div data-kind-panel="feedback"${active !== 'feedback' ? ' hidden' : ''}><div class="field"><label for="rating">Rating</label><select id="rating" name="rating"${active === 'feedback' ? ' required' : ' disabled'}><option value="">Select rating</option><option value="5">5 · Excellent</option><option value="4">4 · Good</option><option value="3">3 · Satisfactory</option><option value="2">2 · Needs improvement</option><option value="1">1 · Poor</option></select><span class="error"></span></div><div class="field"><label for="feedback-message">Feedback / complaint</label><textarea id="feedback-message" name="feedbackMessage" rows="5" minlength="10" maxlength="3000"${active === 'feedback' ? ' required' : ' disabled'}></textarea><span class="error"></span></div></div><div hidden aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div><button class="btn btn-primary" type="submit"${!enabledTypes.length ? ' disabled' : ''}>${escapeHtml(contact.submitButtonText)}</button><p class="form-note" role="status" aria-live="polite">${escapeHtml(contact.statusText)}</p></form></div></section>`;
+}
+
+function renderContactMap(data: PublicSiteData) {
+  const agency = data.agencySettings;
+  const address = agency.officeAddress;
+  const directions = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
+  const embed = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+  return `<section class="section-sm contact-map-section"><div class="container"><div class="map contact-map"><iframe title="${escapeHtml(`${agency.agencyName} location map`)}" src="${escapeHtml(embed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-card"><h3>${escapeHtml(agency.agencyName)}</h3><p>${escapeHtml(address)}</p><a class="btn btn-primary" target="_blank" rel="noopener" href="${escapeHtml(directions)}">Get Directions</a></div></div></div></section>`;
 }
 
 /* Page banners are stored per page, so the copy and the background artwork
@@ -230,7 +243,10 @@ function applyDynamicSections(page: ReferencePage, html: string, data: PublicSit
     html = replaceSection(html, 'section', renderGallerySection(data));
     html = replaceSection(html, 'video-gallery-section', renderVideoHub(data));
   }
-  if (page === 'contact') html = replaceSectionById(html, 'feedback', renderContactForm(data));
+  if (page === 'contact') {
+    html = replaceSectionById(html, 'feedback', renderContactForm(data));
+    html = replaceContactMap(html, renderContactMap(data));
+  }
   return html;
 }
 

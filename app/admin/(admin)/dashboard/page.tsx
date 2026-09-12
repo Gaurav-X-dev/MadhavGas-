@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
   ClipboardList,
@@ -62,6 +63,14 @@ export default function DashboardPage() {
   const [feedback] = usePersistentCollection<Feedback>('feedback', []);
   const [products] = usePersistentCollection<Product>('products', initialProducts);
   const [activityFeed] = usePersistentCollection<ActivityItem>('activity', []);
+  const [activityPage, setActivityPage] = useState(1);
+  const activityPageSize = 10;
+  const activityPageCount = Math.max(1, Math.ceil(activityFeed.length / activityPageSize));
+  const safeActivityPage = Math.min(activityPage, activityPageCount);
+  const pagedActivityFeed = useMemo(
+    () => activityFeed.slice((safeActivityPage - 1) * activityPageSize, safeActivityPage * activityPageSize),
+    [activityFeed, safeActivityPage]
+  );
   const enquiryStatusData = ['Open', 'In Progress', 'Resolved', 'Closed'].map((status, index) => ({
     name: status === 'Open' ? 'New' : status,
     value: enquiries.filter((item) => item.status === status).length,
@@ -249,12 +258,34 @@ export default function DashboardPage() {
       </div>
 
       <Card className="mt-6">
-        <CardHeader>
-          <CardTitle className="text-base">Recent Activity</CardTitle>
-          <CardDescription>Recent database activity</CardDescription>
+        <CardHeader className="flex-row items-center justify-between gap-4">
+          <div>
+            <CardTitle className="text-base">Recent Activity</CardTitle>
+            <CardDescription>Recent database activity · 10 entries per page</CardDescription>
+          </div>
+          {activityFeed.length > activityPageSize && (
+            <div className="text-xs font-medium text-muted-foreground">
+              Page {safeActivityPage} of {activityPageCount}
+            </div>
+          )}
         </CardHeader>
         <CardContent>
-          <ActivityFeed items={activityFeed} />
+          <ActivityFeed items={pagedActivityFeed} />
+          {activityFeed.length > activityPageSize && (
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t pt-4">
+              <p className="text-xs text-muted-foreground">
+                Showing {(safeActivityPage - 1) * activityPageSize + 1}-{Math.min(safeActivityPage * activityPageSize, activityFeed.length)} of {activityFeed.length}
+              </p>
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm" onClick={() => setActivityPage((page) => Math.max(1, page - 1))} disabled={safeActivityPage === 1}>
+                  Previous
+                </Button>
+                <Button variant="outline" size="sm" onClick={() => setActivityPage((page) => Math.min(activityPageCount, page + 1))} disabled={safeActivityPage === activityPageCount}>
+                  Next
+                </Button>
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
