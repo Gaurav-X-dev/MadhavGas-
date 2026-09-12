@@ -578,7 +578,7 @@ export default function HomePageContentPage() {
         </TabsContent>
       </Tabs>
 
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t bg-background/95 px-4 py-3 shadow-[0_-14px_35px_rgba(8,47,87,0.10)] backdrop-blur lg:left-64">
+      <div className="sticky bottom-0 z-20 -mx-4 mt-8 border-t bg-background/95 px-4 py-3 shadow-[0_-14px_35px_rgba(8,47,87,0.08)] backdrop-blur md:-mx-5 md:px-5 lg:-mx-6 lg:px-6 xl:-mx-8 xl:px-8">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4">
           <p className="hidden text-xs text-muted-foreground sm:block">Changes are saved to the database and reflected on the public homepage.</p>
           <Button onClick={handleSave} disabled={saving || !dirty} className="ml-auto">

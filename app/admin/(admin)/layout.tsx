@@ -16,7 +16,7 @@ export default async function AdminLayout({
       <div className="flex min-w-0 flex-1 flex-col">
         <AdminHeader />
         <main className="min-w-0 flex-1">
-          <div className="mx-auto w-full max-w-[1500px] px-4 py-6 pb-28 md:px-5 lg:px-6 xl:px-8">{children}</div>
+          <div className="mx-auto w-full max-w-[1500px] px-4 py-6 md:px-5 lg:px-6 xl:px-8">{children}</div>
         </main>
       </div>
     </div>
