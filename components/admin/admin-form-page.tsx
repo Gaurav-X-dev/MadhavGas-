@@ -49,7 +49,7 @@ export function AdminFormPage({
         {aside && <aside className="min-w-0 space-y-5 xl:sticky xl:top-6">{aside}</aside>}
       </div>
 
-      <div className="sticky bottom-0 z-20 -mx-4 mt-8 border-t border-border bg-background/95 px-4 py-4 shadow-[0_-14px_35px_rgba(8,47,87,0.08)] backdrop-blur md:-mx-5 md:px-5 lg:-mx-6 lg:px-6 xl:-mx-8 xl:px-8">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-14px_35px_rgba(8,47,87,0.10)] backdrop-blur lg:left-64">
         <div className="mx-auto flex w-full max-w-[1500px] items-center justify-between gap-3">
           <p className="hidden text-xs text-muted-foreground sm:block">Required fields are marked with an asterisk.</p>
           <div className="ml-auto flex gap-2">

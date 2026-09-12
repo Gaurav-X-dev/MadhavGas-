@@ -9,14 +9,14 @@ export default async function AdminLayout({
 }) {
   await requireSession();
   return (
-    <div className="flex h-screen overflow-hidden bg-background">
-      <aside className="hidden w-64 shrink-0 lg:block">
+    <div className="flex min-h-screen bg-background">
+      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 lg:block">
         <AdminSidebar />
       </aside>
-      <div className="flex flex-1 flex-col overflow-hidden">
+      <div className="flex min-w-0 flex-1 flex-col">
         <AdminHeader />
-        <main className="flex-1 overflow-y-auto scrollbar-thin">
-          <div className="mx-auto w-full max-w-[1500px] px-4 py-6 md:px-5 lg:px-6 xl:px-8">{children}</div>
+        <main className="min-w-0 flex-1">
+          <div className="mx-auto w-full max-w-[1500px] px-4 py-6 pb-28 md:px-5 lg:px-6 xl:px-8">{children}</div>
         </main>
       </div>
     </div>
