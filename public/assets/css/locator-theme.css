@@ -4551,6 +4551,43 @@ body.menu-open {
     }
 }
 
+/* Final floating actions + QR CTA polish */
+.qr-booking-copy .btn,
+.qr-booking-copy .btn.btn-primary {
+    width: fit-content;
+}
+
+@media (max-width: 767px) {
+    .qr-booking-copy {
+        text-align: center;
+    }
+
+    .qr-booking-copy > p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .qr-booking-copy .btn,
+    .qr-booking-copy .btn.btn-primary {
+        display: inline-flex;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .float-actions {
+        right: max(18px, env(safe-area-inset-right)) !important;
+        bottom: calc(112px + env(safe-area-inset-bottom)) !important;
+        z-index: 45;
+    }
+
+    .back-top {
+        right: max(18px, env(safe-area-inset-right)) !important;
+        bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+        z-index: 44;
+    }
+}
+
 @media (max-width: 767px) {
     html,
     body {
