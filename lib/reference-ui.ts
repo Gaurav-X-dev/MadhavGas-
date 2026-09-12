@@ -72,6 +72,11 @@ function replaceContactMap(html: string, section: string) {
   return html.replace(pattern, section);
 }
 
+function replaceContactInfoCards(html: string, section: string) {
+  const pattern = /<section class="section-sm">\s*<div class="container info-grid">[\s\S]*?<\/div>\s*<\/section>/i;
+  return html.replace(pattern, section);
+}
+
 function renderProductsSection(data: PublicSiteData, home = false) {
   const products = [...data.products].filter((item) => !item.archived).sort((a, b) => a.displayOrder - b.displayOrder);
   if (home) {
@@ -152,6 +157,22 @@ function renderContactForm(data: PublicSiteData) {
 
   const phoneLink = `+${data.agencySettings.phonePrimary.replace(/\D/g, '')}`;
   return `<section class="section" id="feedback"><div class="container contact-grid"><div><span class="eyebrow">${escapeHtml(contact.eyebrow)}</span><h2>${escapeHtml(contact.title)}</h2><p class="lead">${escapeHtml(contact.description)}</p><div class="contact-mini-actions"><a class="btn btn-primary" href="tel:${escapeHtml(phoneLink)}">${escapeHtml(contact.callButtonText)}</a><a class="btn btn-outline" href="mailto:${escapeHtml(data.agencySettings.email)}">${escapeHtml(contact.emailButtonText)}</a></div></div><form class="form-card" id="contact-form" novalidate><div class="field"><label for="request-type">Request type</label><select id="request-type" name="type" required${!enabledTypes.length ? ' disabled' : ''}>${requestTypeOptions}</select><span class="error"></span></div><div class="field-grid"><div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" maxlength="120" required /><span class="error"></span></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" inputmode="tel" autocomplete="tel" maxlength="20" required /><span class="error"></span></div></div><div class="field"><label for="email">Email <small>(optional)</small></label><input id="email" type="email" name="email" autocomplete="email" maxlength="255" /><span class="error"></span></div><div data-kind-panel="enquiry"${active !== 'enquiry' ? ' hidden' : ''}><div class="field"><label for="subject">Enquiry subject</label><input id="subject" name="subject" maxlength="160"${active === 'enquiry' ? ' required' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="enquiry-message">Enquiry details</label><textarea id="enquiry-message" name="enquiryMessage" rows="5" minlength="10" maxlength="3000"${active === 'enquiry' ? ' required' : ' disabled'}></textarea><span class="error"></span></div></div><div data-kind-panel="booking"${active !== 'booking' ? ' hidden' : ''}><div class="field"><label for="business-name">Business name <small>(optional)</small></label><input id="business-name" name="businessName" maxlength="160"${active === 'booking' ? '' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="cylinder-type">Cylinder / service</label><select id="cylinder-type" name="cylinderType"${active === 'booking' ? ' required' : ' disabled'}><option value="">Select a product</option>${productOptions}</select><span class="error"></span></div><div class="field-grid"><div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" max="1000" step="1"${active === 'booking' ? ' required' : ' disabled'} /><span class="error"></span></div><div class="field"><label for="delivery-area">Delivery area</label><input id="delivery-area" name="deliveryArea" maxlength="160"${active === 'booking' ? ' required' : ' disabled'} /><span class="error"></span></div></div><div class="field"><label for="booking-message">Booking notes <small>(optional)</small></label><textarea id="booking-message" name="bookingMessage" rows="4" maxlength="2000"${active === 'booking' ? '' : ' disabled'}></textarea><span class="error"></span></div></div><div data-kind-panel="feedback"${active !== 'feedback' ? ' hidden' : ''}><div class="field"><label for="rating">Rating</label><select id="rating" name="rating"${active === 'feedback' ? ' required' : ' disabled'}><option value="">Select rating</option><option value="5">5 · Excellent</option><option value="4">4 · Good</option><option value="3">3 · Satisfactory</option><option value="2">2 · Needs improvement</option><option value="1">1 · Poor</option></select><span class="error"></span></div><div class="field"><label for="feedback-message">Feedback / complaint</label><textarea id="feedback-message" name="feedbackMessage" rows="5" minlength="10" maxlength="3000"${active === 'feedback' ? ' required' : ' disabled'}></textarea><span class="error"></span></div></div><div hidden aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div><button class="btn btn-primary" type="submit"${!enabledTypes.length ? ' disabled' : ''}>${escapeHtml(contact.submitButtonText)}</button><p class="form-note" role="status" aria-live="polite">${escapeHtml(contact.statusText)}</p></form></div></section>`;
+}
+
+function renderContactInfoCards(data: PublicSiteData) {
+  const agency = data.agencySettings;
+  const phone = agency.phonePrimary.replace(/\D/g, '');
+  const alternate = agency.phoneSecondary.replace(/\D/g, '');
+  const whatsapp = (data.qrSettings.whatsappNumber || agency.whatsappNumber).replace(/\D/g, '');
+  const directions = `https://maps.google.com/?q=${encodeURIComponent(agency.officeAddress)}`;
+  const whatsappHref = whatsapp ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(data.qrSettings.defaultMessage || `Hello ${agency.agencyName}`)}` : '#';
+  return `<section class="section-sm contact-info-section"><div class="container info-grid">`
+    + `<article class="info-card"><span class="icon" data-icon="map-pin"></span><h3>Visit the Agency</h3><p>${escapeHtml(agency.officeAddress)}</p><a href="${escapeHtml(directions)}" target="_blank" rel="noopener">Open directions</a></article>`
+    + `<article class="info-card"><span class="icon" data-icon="phone"></span><h3>Call Us</h3><p><a href="tel:+${escapeHtml(phone)}">${escapeHtml(agency.phonePrimary)}</a>${alternate ? `<br />Alternate: <a href="tel:+${escapeHtml(alternate)}">${escapeHtml(agency.phoneSecondary)}</a>` : ''}</p></article>`
+    + `<article class="info-card"><span class="icon" data-icon="clock"></span><h3>Office Timing</h3><p>${escapeHtml(agencyTime(agency.businessHours))}<br />Weekly Off: Sunday</p></article>`
+    + `<article class="info-card"><span class="icon" data-icon="message-circle"></span><h3>WhatsApp Support</h3><p><a href="${escapeHtml(whatsappHref)}" target="_blank" rel="noopener">Chat with our local team</a></p></article>`
+    + `<article class="info-card"><span class="icon" data-icon="mail"></span><h3>Email Us</h3><p><a href="mailto:${escapeHtml(agency.email)}">${escapeHtml(agency.email)}</a></p></article>`
+    + `</div></section>`;
 }
 
 function googleMapsEmbedSource(value: string | undefined, address: string) {
@@ -258,6 +279,7 @@ function applyDynamicSections(page: ReferencePage, html: string, data: PublicSit
     html = replaceSection(html, 'video-gallery-section', renderVideoHub(data));
   }
   if (page === 'contact') {
+    html = replaceContactInfoCards(html, renderContactInfoCards(data));
     html = replaceSectionById(html, 'feedback', renderContactForm(data));
     html = replaceContactMap(html, renderContactMap(data));
   }
