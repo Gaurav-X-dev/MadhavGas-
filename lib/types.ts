@@ -96,6 +96,8 @@ export interface SiteContent {
   bharatgasLogoAlt: string;
   mbgaLogoUrl: string;
   mbgaLogoAlt: string;
+  faviconUrl?: string;
+  faviconAlt?: string;
   heroSlides: HeroSlide[];
 }
 

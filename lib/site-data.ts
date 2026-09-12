@@ -85,6 +85,8 @@ const emptySiteContent: SiteContent = {
   bharatgasLogoAlt: '',
   mbgaLogoUrl: '',
   mbgaLogoAlt: '',
+  faviconUrl: '',
+  faviconAlt: '',
   heroSlides: [],
 };
 

@@ -269,7 +269,7 @@ function renderAchievements(data: PublicSiteData) {
       const media = item.imageUrl
         ? `<img class="award-card-image" src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.title)}" loading="lazy" />`
         : `<div class="award-icon">${glyphs[index % glyphs.length]}</div>`;
-      return `<article class="award-card${index === 0 ? ' award-card-featured' : ''} reveal-up">`
+      return `<article class="award-card reveal-up">`
         + `<span class="award-year">${escapeHtml(item.brand)}</span>${media}`
         + `<small>${escapeHtml(item.type)}</small><h3>${escapeHtml(item.title)}</h3>`
         + `<p>${escapeHtml(item.description)}</p><span class="award-label">${escapeHtml(item.year)}</span></article>`;

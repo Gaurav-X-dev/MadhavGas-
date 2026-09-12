@@ -338,6 +338,8 @@ export const siteContent: SiteContent = {
   bharatgasLogoAlt: 'Bharatgas logo',
   mbgaLogoUrl: '/assets/brands/mbga-logo.svg',
   mbgaLogoAlt: 'Madhav Bharat Gas Agency logo',
+  faviconUrl: '/icon.svg',
+  faviconAlt: 'Madhav Bharat Gas Agency favicon',
   heroSlides: [
     {
       id: 'hero-1',

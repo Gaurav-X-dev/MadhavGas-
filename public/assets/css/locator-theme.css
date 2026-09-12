@@ -4463,3 +4463,101 @@ body.menu-open {
         transform: none !important;
     }
 }
+
+/* Final page-polish fixes: footer mobile gap, cards, journey rhythm */
+.award-card,
+.award-card-featured,
+.award-card-featured:hover {
+    color: inherit !important;
+    background: #fff !important;
+    border-color: var(--locator-line) !important;
+}
+
+.award-card h3,
+.award-card-featured h3,
+.award-card-featured:hover h3 {
+    color: var(--locator-navy) !important;
+}
+
+.award-card p,
+.award-card-featured p,
+.award-card-featured:hover p {
+    color: var(--locator-muted) !important;
+}
+
+.award-card:hover {
+    background: #fff !important;
+    border-color: #edc517 !important;
+}
+
+.home-journey-section .preview-step:nth-child(even),
+.home-journey-section .preview-step:nth-child(4n) {
+    background: #eef5fb;
+}
+
+.home-journey-section .preview-step:hover {
+    color: inherit;
+    background: inherit;
+}
+
+.home-journey-section .preview-step:nth-child(even):hover,
+.home-journey-section .preview-step:nth-child(4n):hover {
+    background: #eef5fb;
+}
+
+.home-journey-section .preview-step:hover h3,
+.home-journey-section .preview-step:hover p,
+.home-journey-section .preview-step:hover small,
+.home-journey-section .preview-step:hover i,
+.home-journey-section .preview-step:hover > span,
+.home-journey-section .preview-step:hover > b {
+    color: inherit;
+}
+
+.home-journey-section .preview-step:hover .journey-read-more {
+    color: var(--locator-navy);
+}
+
+@media (min-width: 768px) {
+    .home-journey-section .preview-steps {
+        align-items: stretch;
+    }
+
+    .home-journey-section .preview-step {
+        display: flex;
+        flex-direction: column;
+        min-height: 520px;
+    }
+
+    .home-journey-section .preview-step p {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    html,
+    body {
+        background: #003f79;
+    }
+
+    .premium-footer {
+        margin-bottom: 0 !important;
+        padding-bottom: calc(22px + env(safe-area-inset-bottom)) !important;
+    }
+
+    .premium-footer::after {
+        bottom: -110px !important;
+    }
+
+    .back-top {
+        bottom: calc(14px + env(safe-area-inset-bottom)) !important;
+    }
+
+    .float-actions {
+        bottom: calc(88px + env(safe-area-inset-bottom)) !important;
+    }
+
+    .home-journey-section .preview-step {
+        min-height: auto !important;
+    }
+}

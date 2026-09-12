@@ -120,7 +120,9 @@ const iconPaths = {
 };
 
 function iconMarkup(name) {
-    return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${iconPaths[name] || ""}</svg>`;
+    const key = String(name || "").trim().replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+    const aliases = { shieldcheck: "shield-check", "shield-check": "shield-check", building2: "building2", trendingup: "trending-up", "trending-up": "trending-up", route: "route", flame: "flame", headphones: "headphones" };
+    return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${iconPaths[aliases[key] || key] || iconPaths.flame || ""}</svg>`;
 }
 
 function hydrateIcons(root = document) {
