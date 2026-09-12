@@ -4609,3 +4609,57 @@ body.menu-open {
     color: var(--locator-muted);
     line-height: 1.5;
 }
+
+/* Final desktop header alignment: keep both logos and agency name visually centered */
+@media (min-width: 768px) {
+    .site-header .nav-wrap {
+        align-items: center;
+    }
+
+    .site-header .brand {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .site-header .dual-brand-marks.has-brand-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 72px;
+        gap: 16px;
+        padding-right: 22px;
+    }
+
+    .site-header .mbga-mark.has-brand-image,
+    .site-header .bharatgas-mark.has-brand-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-header .mbga-mark.has-brand-image {
+        width: 72px;
+        min-width: 72px;
+        height: 72px;
+    }
+
+    .site-header .bharatgas-mark.has-brand-image {
+        width: 104px;
+        min-width: 104px;
+        height: 52px;
+    }
+
+    .site-header .brand-text {
+        display: flex;
+        min-height: 72px;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(2px);
+    }
+
+    .site-header .brand-text strong,
+    .site-header .brand-text small {
+        display: block;
+    }
+}
