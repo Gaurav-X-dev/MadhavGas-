@@ -4579,6 +4579,51 @@ body.menu-open {
     }
 }
 
+/* Final footer logo guard: uploaded brand artwork must never expand the footer */
+.premium-footer .footer-brand,
+.premium-footer .footer-about {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+.premium-footer .footer-brand .brand,
+.premium-footer .footer-brand .dual-brand-marks,
+.premium-footer .footer-about .dual-brand-marks {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    max-width: 210px !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+.premium-footer .footer-brand .mbga-mark,
+.premium-footer .footer-about .mbga-mark {
+    width: 52px !important;
+    min-width: 52px !important;
+    height: 52px !important;
+    overflow: hidden !important;
+}
+
+.premium-footer .footer-brand .bharatgas-mark,
+.premium-footer .footer-about .bharatgas-mark {
+    width: 86px !important;
+    min-width: 86px !important;
+    height: 38px !important;
+    overflow: hidden !important;
+}
+
+.premium-footer .footer-brand img,
+.premium-footer .footer-about img,
+.premium-footer .brand-logo-image {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+}
+
 /* Final floating actions + QR CTA polish */
 .qr-booking-copy .btn,
 .qr-booking-copy .btn.btn-primary {

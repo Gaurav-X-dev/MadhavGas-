@@ -167,6 +167,16 @@ export default function SettingsPage() {
                 <Textarea rows={2} value={settings.officeAddress} onChange={(e) => update('officeAddress', e.target.value)} />
               </div>
               <div className="space-y-1.5">
+                <Label>Google Maps embed URL / iframe</Label>
+                <Textarea
+                  rows={3}
+                  value={settings.mapEmbedUrl || ''}
+                  onChange={(e) => update('mapEmbedUrl', e.target.value)}
+                  placeholder="Paste the Google Maps embed URL or full iframe code"
+                />
+                <p className="text-xs text-muted-foreground">Google Maps → Share → Embed a map → copy HTML. The public contact map will use this.</p>
+              </div>
+              <div className="space-y-1.5">
                 <Label>Business hours</Label>
                 <Input value={settings.businessHours} onChange={(e) => update('businessHours', e.target.value)} />
               </div>

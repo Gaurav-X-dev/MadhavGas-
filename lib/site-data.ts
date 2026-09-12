@@ -170,6 +170,7 @@ const emptyAgencySettings: AgencySettings = {
   phoneSecondary: '',
   email: '',
   officeAddress: '',
+  mapEmbedUrl: '',
   businessHours: '',
   whatsappNumber: '',
   facebook: '',

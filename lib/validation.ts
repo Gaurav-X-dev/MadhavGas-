@@ -17,6 +17,18 @@ const relativeOrUrl = z.string().trim().max(2048).refine((value) => {
     return false;
   }
 }, 'Use a local path or a secure HTTP(S) URL');
+const googleMapEmbed = z.string().trim().max(5000).refine((value) => {
+  if (value === '') return true;
+  const source = value.match(/\bsrc=["']([^"']+)["']/i)?.[1] || value;
+  try {
+    const url = new URL(source);
+    return (url.protocol === 'https:' || url.protocol === 'http:')
+      && /(^|\.)google\.[a-z.]+$/i.test(url.hostname)
+      && url.pathname.startsWith('/maps');
+  } catch {
+    return false;
+  }
+}, 'Paste a Google Maps embed URL or iframe code');
 const displayOrder = z.coerce.number().int().min(0).max(100000);
 
 const product = z.object({ id, name: shortText, slug: z.string().trim().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(160), category: z.enum(['Commercial', 'Industrial', 'Specialty']), cylinderCapacity: shortText, description: z.string().trim().min(10).max(3000), features: z.array(z.string().trim().min(1).max(240)).max(20), image: relativeOrUrl, availability: z.enum(['In Stock', 'Limited', 'Out of Stock']), displayOrder, archived: z.boolean() }).strict();
@@ -215,7 +227,7 @@ export const pageHeroesSchema = z.object({
 const discoveryItem = z.object({ id, label: shortText, href: relativeOrUrl.refine(Boolean, 'Destination is required'), displayOrder, active: z.boolean() }).strict();
 export const localDiscoverySchema = z.object({ heading: shortText, description: z.string().trim().min(20).max(1000).refine(noMarkup, 'HTML markup is not allowed'), localities: z.array(discoveryItem).max(50), categories: z.array(discoveryItem).max(50), topics: z.array(discoveryItem).max(50) }).strict();
 const qrSettings = z.object({ whatsappNumber: phone, defaultMessage: z.string().trim().min(5).max(2000), bookingUrl: relativeOrUrl }).strict();
-export const agencySettingsSchema = z.object({ agencyName: shortText, tagline: z.string().trim().min(5).max(300).refine(noMarkup, 'HTML markup is not allowed'), phonePrimary: phone, phoneSecondary: phone, email: z.email().max(255), officeAddress: z.string().trim().min(10).max(500).refine(noMarkup, 'HTML markup is not allowed'), businessHours: shortText, whatsappNumber: phone, facebook: relativeOrUrl, instagram: relativeOrUrl, linkedin: relativeOrUrl, twitter: relativeOrUrl, notifyNewBookings: z.boolean(), notifyNewEnquiries: z.boolean(), notifyNewFeedback: z.boolean(), notifyLowStock: z.boolean(), emailTemplateBooking: longText, emailTemplateEnquiry: longText, emailTemplateFeedback: longText }).strict();
+export const agencySettingsSchema = z.object({ agencyName: shortText, tagline: z.string().trim().min(5).max(300).refine(noMarkup, 'HTML markup is not allowed'), phonePrimary: phone, phoneSecondary: phone, email: z.email().max(255), officeAddress: z.string().trim().min(10).max(500).refine(noMarkup, 'HTML markup is not allowed'), mapEmbedUrl: googleMapEmbed.optional().or(z.literal('')), businessHours: shortText, whatsappNumber: phone, facebook: relativeOrUrl, instagram: relativeOrUrl, linkedin: relativeOrUrl, twitter: relativeOrUrl, notifyNewBookings: z.boolean(), notifyNewEnquiries: z.boolean(), notifyNewFeedback: z.boolean(), notifyLowStock: z.boolean(), emailTemplateBooking: longText, emailTemplateEnquiry: longText, emailTemplateFeedback: longText }).strict();
 
 const contactFormTypeSchema = z.object({ id: z.enum(['enquiry', 'booking', 'feedback']), label: shortText, enabled: z.boolean(), displayOrder }).strict();
 export const contactSettingsSchema = z.object({

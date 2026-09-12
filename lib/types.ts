@@ -606,6 +606,7 @@ export interface AgencySettings {
   phoneSecondary: string;
   email: string;
   officeAddress: string;
+  mapEmbedUrl?: string;
   businessHours: string;
   whatsappNumber: string;
   facebook: string;
