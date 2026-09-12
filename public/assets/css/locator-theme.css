@@ -4729,6 +4729,30 @@ body.menu-open {
     line-height: 1.5;
 }
 
+/* Contact detail cards: keep dynamic icons clear and readable */
+.contact-info-section .info-card .icon {
+    display: inline-flex !important;
+    width: 34px !important;
+    height: 34px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 22px !important;
+    color: var(--locator-blue) !important;
+}
+
+.contact-info-section .info-card .icon svg,
+.contact-info-section .info-card .icon [data-lucide],
+.contact-info-section .info-card svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    stroke-width: 2.2 !important;
+}
+
+.contact-info-section .info-card h3 {
+    margin-top: 0 !important;
+}
+
 /* Final desktop header alignment: keep both logos and agency name visually centered */
 @media (min-width: 768px) {
     .site-header .nav-wrap {

@@ -193,8 +193,9 @@ function renderContactMap(data: PublicSiteData) {
   const agency = data.agencySettings;
   const address = agency.officeAddress;
   const directions = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
+  const primary = googleMapsEmbedSource(agency.mapEmbedUrl, address);
   const fallback = `https://www.openstreetmap.org/export/embed.html?bbox=76.7%2C28.0%2C77.4%2C28.7&layer=mapnik&marker=28.3892%2C76.8839`;
-  return `<section class="section-sm contact-map-section"><div class="container"><div class="map contact-map"><iframe class="contact-map-fallback" title="${escapeHtml(`${agency.agencyName} location map`)}" src="${escapeHtml(fallback)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-card"><h3>${escapeHtml(agency.agencyName)}</h3><p>${escapeHtml(address)}</p><a class="btn btn-primary" target="_blank" rel="noopener" href="${escapeHtml(directions)}">Get Directions</a></div></div></div></section>`;
+  return `<section class="section-sm contact-map-section"><div class="container"><div class="map contact-map"><iframe class="contact-map-fallback" title="${escapeHtml(`${agency.agencyName} fallback map`)}" src="${escapeHtml(fallback)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><iframe class="contact-map-primary" title="${escapeHtml(`${agency.agencyName} Google map`)}" src="${escapeHtml(primary)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-card"><h3>${escapeHtml(agency.agencyName)}</h3><p>${escapeHtml(address)}</p><a class="btn btn-primary" target="_blank" rel="noopener" href="${escapeHtml(directions)}">Get Directions</a></div></div></div></section>`;
 }
 
 /* Page banners are stored per page, so the copy and the background artwork
