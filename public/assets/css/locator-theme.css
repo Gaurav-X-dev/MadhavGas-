@@ -4753,6 +4753,23 @@ body.menu-open {
     margin-top: 0 !important;
 }
 
+.contact-info-section .info-card > span[data-icon],
+.contact-info-section .info-card .icon[data-icon] {
+    display: inline-grid !important;
+    width: 42px !important;
+    height: 42px !important;
+    place-items: center !important;
+    margin-bottom: 22px !important;
+    color: var(--locator-blue) !important;
+}
+
+.contact-info-section .info-card > span[data-icon] svg,
+.contact-info-section .info-card .icon[data-icon] svg {
+    width: 30px !important;
+    height: 30px !important;
+    stroke-width: 2.25 !important;
+}
+
 /* Final desktop header alignment: keep both logos and agency name visually centered */
 @media (min-width: 768px) {
     .site-header .nav-wrap {

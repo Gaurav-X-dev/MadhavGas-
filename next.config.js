@@ -6,7 +6,7 @@ const contentSecurityPolicy = [
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: blob: https:",
   "connect-src 'self'",
-  "frame-src https://www.youtube.com https://youtube.com",
+  "frame-src 'self' https://www.youtube.com https://youtube.com https://www.google.com https://google.com https://maps.google.com https://www.google.co.in https://www.openstreetmap.org",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
