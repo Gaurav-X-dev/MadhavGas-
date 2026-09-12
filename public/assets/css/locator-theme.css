@@ -4703,14 +4703,23 @@ body.menu-open {
     filter: saturate(.92) contrast(.98);
 }
 
-.contact-map::before {
+.contact-map .contact-map-fallback {
+    z-index: 0;
+}
+
+.contact-map .contact-map-primary {
     z-index: 1;
+    background: transparent;
+}
+
+.contact-map::before {
+    z-index: 2;
     background: linear-gradient(90deg, rgba(3, 41, 79, .10), rgba(255, 255, 255, .05));
     pointer-events: none;
 }
 
 .contact-map .map-card {
-    z-index: 2;
+    z-index: 3;
     border: 1px solid rgba(8, 47, 87, .12);
 }
 
