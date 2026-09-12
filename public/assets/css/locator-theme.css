@@ -4551,6 +4551,34 @@ body.menu-open {
     }
 }
 
+/* Final floating action spacing: keep WhatsApp/call clear of the back-to-top button */
+.float-actions {
+    right: max(28px, env(safe-area-inset-right)) !important;
+    bottom: calc(104px + env(safe-area-inset-bottom)) !important;
+    z-index: 45 !important;
+    display: grid !important;
+    gap: 12px !important;
+}
+
+.back-top {
+    right: max(28px, env(safe-area-inset-right)) !important;
+    bottom: calc(28px + env(safe-area-inset-bottom)) !important;
+    z-index: 44 !important;
+}
+
+@media (max-width: 767px) {
+    .float-actions {
+        right: max(18px, env(safe-area-inset-right)) !important;
+        bottom: calc(112px + env(safe-area-inset-bottom)) !important;
+        gap: 10px !important;
+    }
+
+    .back-top {
+        right: max(18px, env(safe-area-inset-right)) !important;
+        bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+    }
+}
+
 /* Final floating actions + QR CTA polish */
 .qr-booking-copy .btn,
 .qr-booking-copy .btn.btn-primary {
