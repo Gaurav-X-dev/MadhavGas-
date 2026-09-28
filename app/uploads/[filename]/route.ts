@@ -6,11 +6,13 @@ import { uploadDirectory } from '@/lib/upload-storage';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const safeFileName = /^[0-9]+-[a-f0-9]{24}\.(?:jpg|png|webp|mp4|webm)$/;
+const safeFileName = /^[0-9]+-[a-f0-9]{24}\.(?:jpg|png|webp|mp4|webm|svg|ico)$/;
 const mimeTypes: Record<string, string> = {
   '.jpg': 'image/jpeg',
   '.png': 'image/png',
   '.webp': 'image/webp',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
   '.mp4': 'video/mp4',
   '.webm': 'video/webm',
 };
