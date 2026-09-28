@@ -516,6 +516,7 @@ export interface Achievement {
   year: string;
   brand: string;
   imageUrl: string;
+  displayOrder: number;
   published: boolean;
 }
 

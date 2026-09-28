@@ -508,6 +508,7 @@ export const achievements: Achievement[] = [
     year: 'MBGA',
     brand: 'Bharatgas',
     imageUrl: '/assets/certificates/certificate.svg',
+    displayOrder: 1,
     published: true,
   },
   {
@@ -518,6 +519,7 @@ export const achievements: Achievement[] = [
     year: 'MBGA',
     brand: 'MBGA',
     imageUrl: '',
+    displayOrder: 2,
     published: true,
   },
 ];

@@ -31,7 +31,7 @@ function blankEntity(kind: ContentEntityKind): Entity {
   if (kind === 'products') return { id: '', name: '', slug: '', category: 'Commercial', cylinderCapacity: '', description: '', features: [], image: '', availability: 'In Stock', displayOrder: 1, archived: false };
   if (kind === 'gallery') return { id: '', type: 'Image', url: '', thumbnailUrl: '', category: 'Agency', altText: '', caption: '', displayOrder: 1, status: 'Draft' };
   if (kind === 'journey') return { id: '', year: '', category: 'Agency Service', title: '', description: '', brand: 'MBGA', icon: 'Building2', imageUrl: '', imageAlt: '', displayOrder: 1, published: true, featured: false };
-  return { id: '', type: 'Milestone', title: '', description: '', year: '', brand: 'MBGA', imageUrl: '', published: true };
+  return { id: '', type: 'Milestone', title: '', description: '', year: '', brand: 'MBGA', imageUrl: '', displayOrder: 1, published: true };
 }
 
 function entityImage(kind: ContentEntityKind, item: Entity) {

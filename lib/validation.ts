@@ -44,7 +44,7 @@ const gallery = z.object({ id, type: z.enum(['Image', 'Video']), url: relativeOr
 export const journeySchema = z.object({ id, year: optionalShortText, category: shortText, title: shortText, description: z.string().trim().min(10).max(3000), brand: z.enum(['MBGA', 'Bharatgas']), icon: z.string().trim().min(1).max(80), imageUrl: relativeOrUrl, imageAlt: z.string().trim().max(300).refine(noMarkup, 'HTML markup is not allowed'), displayOrder, published: z.boolean(), featured: z.boolean() }).strict().superRefine((value, context) => {
   if (value.imageUrl && value.imageAlt.length < 3) context.addIssue({ code: 'custom', path: ['imageAlt'], message: 'Image alt text is required when an image is selected' });
 });
-export const achievementSchema = z.object({ id, type: z.enum(['Award', 'Milestone', 'Recognition', 'Certificate']), title: shortText, description: z.string().trim().min(10).max(3000), year: shortText, brand: shortText, imageUrl: relativeOrUrl, published: z.boolean() }).strict();
+export const achievementSchema = z.object({ id, type: z.enum(['Award', 'Milestone', 'Recognition', 'Certificate']), title: shortText, description: z.string().trim().min(10).max(3000), year: shortText, brand: shortText, imageUrl: relativeOrUrl, displayOrder, published: z.boolean() }).strict();
 const user = z.object({ id, name: shortText, email: z.email().max(255), role: z.enum(['Super Admin', 'Editor', 'Support Staff', 'Viewer']), active: z.boolean(), lastActive: z.string().max(100).optional(), password: z.string().min(8).max(128).optional() }).strict();
 
 export const productSchema = product;
