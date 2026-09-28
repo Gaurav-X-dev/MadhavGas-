@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const data = await getPublicSiteData();
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://madhavbharatgasagency.com').replace(/\/$/, '');
   const icon = data.siteContent.faviconUrl || data.siteContent.mbgaLogoUrl || data.siteContent.bharatgasLogoUrl || '/icon.svg';
-  const iconUrl = absoluteAssetUrl(icon, siteUrl);
+  const iconUrl = absoluteAssetUrl(icon, siteUrl) + '?v=' + Date.now();
   return {
     icons: {
       icon: iconUrl,
