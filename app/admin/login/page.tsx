@@ -157,7 +157,7 @@ export default function LoginPage() {
                   Remember me
                 </Label>
               </div>
-              <a href="mailto:admin@mbga.in?subject=Admin%20password%20reset" className="text-xs font-semibold text-brand-blue hover:underline">Forgot password?</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@mbga.in&su=Admin%20password%20reset" className="text-xs font-semibold text-brand-blue hover:underline">Forgot password?</a>
             </div>
 
             <Button type="submit" className="w-full" size="lg" disabled={submitting}>
